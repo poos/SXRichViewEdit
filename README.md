@@ -1,16 +1,42 @@
 # SXRichViewEdit
 show richView and edit 
 
+##特点:
+1,支持html导入,导出html
+2,图片自适应宽度
+3,接口简单
 
 ##导入方法
 
-
 pod 'SXRichViewEdit'
-
 
 ##调用
 头文件#import "SXRichViewEdit.h"
-###.精简了大量的方法,只留下了:
+```
+//*必须****点击确定时候调用,应在block中发起网络请求,请求图片url
+@property (nonatomic, copy) DoneButtonBlock doneButtonBlock;
+//*必须****初始化方法
+- (instancetype)initWithFrame:(CGRect)frame andSelfCon:(UIViewController *)selfCon;
+//*必须****传入imageUrlArr得到HtmlString
+- (NSString *)retureHtmlStrWithImageArr:(NSArray <NSString *> *)imageUrlArr;
+
+//*****设置内容，二次编辑传入htmlString
+- (void)setRichTextViewHtmlStr:(NSString *)htmlStr andImageArr:(NSArray <UIImage *>*)imageArr ;
+
+
+/****
+    以下定制方法
+    隐藏button在外部调用
+ */
+//是否显示 '添加图片button' 和 '完成button' ,默认NO
+@property (nonatomic, assign) BOOL hideButton;
+//添加图片按钮被点击
+- (void)imageButtonAction;
+//完成按钮被点击
+- (void)doneButtonAction;
+```
+
+###.调用示例:
 ```
  static NSString * htmlString = nil;
     
