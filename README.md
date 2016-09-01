@@ -36,7 +36,7 @@ pod 'SXRichViewEdit'
 - (void)doneButtonAction;
 ```
 
-###.调用示例:
+###.调用示例:例子调用生成了html代码,然后加载了另一段html代码
 ```
  static NSString * htmlString = nil;
     
@@ -52,8 +52,9 @@ pod 'SXRichViewEdit'
         NSLog(@"%@", htmlString);
         
         
-        //加载 test test test test test test test test
+        //------------------加载 test test test test test test test test
         [self.editView setRichTextViewHtmlStr:@" <body> <p class=\"p1\"><span class=\"s1\">不可置否，新的广告载体出现，通常都意味着一定的流量红利。业内分析称，对广告主来说，短视频广告投放显然正处在这短暂的红利期。</span></p> <p class=\"p2\"><span class=\"s2\"><img src=\"http://img2.donews.com/2016/0831/39971464.jpg.450.jpg\"></span></p> <p class=\"p1\"><span class=\"s1\">据今日头条官方数据显示，截至2016年8月，平台内累计激活用户数达5.3亿，仅app的日活跃用户超过5500万。头条视频目前每日10亿次播放，单日播放时长超2800万小时，每日逾3万支优质视频内容上传</span></p><p class=\"p1\"><span class=\"s1\">结果已经打印结果已经打印</span></p><p class=\"p1\"><span class=\"s1\">结果已经打印结果已经打印</span></p><p class=\"p1\"><span class=\"s1\">结果已经打印结果已经打印</span></p> </body>" andImageArr:@[[UIImage imageNamed:@"123.jpg"]]];
+        //------------------加载 test test test test test test test test
     };
 ```
 
