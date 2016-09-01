@@ -21,6 +21,7 @@
 		CD355DBB1D76BF6F00AADBBC /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = CD355DB41D76BF6F00AADBBC /* UIColor+HEX.m */; };
 		CD355DBE1D76BFAB00AADBBC /* SXRichViewEdit.m in Sources */ = {isa = PBXBuildFile; fileRef = CD355DBD1D76BFAB00AADBBC /* SXRichViewEdit.m */; };
 		CD355DC31D76CA1A00AADBBC /* NSJSON+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = CD355DC01D76CA1A00AADBBC /* NSJSON+Extension.m */; };
+		CD3C7AA01D78307A009D99C4 /* 123.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD3C7A9F1D78307A009D99C4 /* 123.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		CD355DBD1D76BFAB00AADBBC /* SXRichViewEdit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXRichViewEdit.m; sourceTree = "<group>"; };
 		CD355DBF1D76CA1A00AADBBC /* NSJSON+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSJSON+Extension.h"; sourceTree = "<group>"; };
 		CD355DC01D76CA1A00AADBBC /* NSJSON+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSJSON+Extension.m"; sourceTree = "<group>"; };
+		CD3C7A9F1D78307A009D99C4 /* 123.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 123.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		CD355D901D76BE3900AADBBC /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				CD3C7A9F1D78307A009D99C4 /* 123.jpg */,
 				CD355D941D76BE3900AADBBC /* AppDelegate.h */,
 				CD355D951D76BE3900AADBBC /* AppDelegate.m */,
 				CD355DA21D76BE5B00AADBBC /* RootViewController.h */,
@@ -189,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD3C7AA01D78307A009D99C4 /* 123.jpg in Resources */,
 				CD355D981D76BE3900AADBBC /* Assets.xcassets in Resources */,
 				CD355D9B1D76BE3900AADBBC /* LaunchScreen.storyboard in Resources */,
 			);
@@ -355,6 +359,7 @@
 				CD355DA11D76BE3900AADBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
