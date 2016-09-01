@@ -25,7 +25,7 @@
     editView.doneButtonBlock = ^(){
         NSLog(@"点击了确定按钮,做一些事情,例如上传图片等");
         
-        //假设图片传完了.得到了urlArr
+        //假设图片传完了.得到了urlArr,传入url得到html字符串
         htmlString = [editView retureHtmlStrWithImageArr:@[@"http://image1.png"]];
         
         NSLog(@"%@", htmlString);
