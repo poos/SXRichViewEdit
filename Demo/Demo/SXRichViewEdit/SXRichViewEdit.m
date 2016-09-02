@@ -22,23 +22,26 @@
 
 @interface SXRichViewEdit () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate>
 
-@property (nonatomic, weak) UIViewController *selfController;
-@property (nonatomic, strong) UITextView *textView;
-@property (nonatomic, strong) UILabel *placeholderLabel; //默认提示字
-@property (nonatomic, assign) NSRange newRange;          //记录最新内容的range
-@property (nonatomic, strong) NSString *newstr;          //记录最新内容的字符串
-@property (nonatomic, assign) NSUInteger location;       //纪录变化的起始位置
-@property (nonatomic, strong) NSMutableArray *imageArr;         //记录添加的图片
+@property (nonatomic, weak  ) UIViewController          *selfController;
+@property (nonatomic, strong) UITextView                *textView;
+@property (nonatomic, strong) UILabel                   *placeholderLabel;//默认提示字
+@property (nonatomic, assign) NSRange                   newRange;//记录最新内容的range
+@property (nonatomic, strong) NSString                  *newstr;//记录最新内容的字符串
+@property (nonatomic, assign) NSUInteger                location;//纪录变化的起始位置
+@property (nonatomic, strong) NSMutableArray            *imageArr;//记录添加的图片
 
-@property (nonatomic, strong) NSMutableAttributedString *locationStr; //纪录变化时的内容，即是
-@property (nonatomic, assign) CGFloat lineSapce;                      //行间距
-@property (nonatomic, assign) BOOL isDelete;                          //是否是回删
-@property (nonatomic, assign) CGRect selfFrame;                       //默认位置
-@property (nonatomic, assign) CGRect selfNewFrame;                    //弹起键盘的位置
+@property (nonatomic, strong) NSMutableAttributedString *locationStr;//纪录变化时的内容，即是
+@property (nonatomic, assign) CGFloat                   lineSapce;//行间距
+@property (nonatomic, assign) BOOL                      isDelete;//是否是回删
+@property (nonatomic, assign) CGRect                    selfFrame;//默认位置
+@property (nonatomic, assign) CGRect                    selfNewFrame;//弹起键盘的位置
 
-@property (nonatomic, strong) UIButton *imgButton;
-@property (nonatomic, strong) UIButton *doneButton;
+@property (nonatomic, assign) NSInteger                 imageIndex;//加载的图片index
 
+
+@property (nonatomic, strong) UIButton                  *imgButton;
+@property (nonatomic, strong) UIButton                  *doneButton;
+@property (nonatomic, copy  ) DoneButtonBlock           doneButtonBlock;
 
 @end
 
@@ -92,42 +95,65 @@
     }
 }
 
-#pragma mark 设置内容，二次编辑
+#pragma mark ---------------设置内容，二次编辑-----------------
 //*****设置内容，二次编辑传入htmlString
-- (void)setRichTextViewHtmlStr:(NSString *)htmlStr andImageArr:(NSArray <UIImage *>*)imageArr {
+- (void)setRichTextViewHtmlStr:(NSString *)htmlStr andDownloadImageBlock:(DownloadImageBlock)downloadImageBlock {
     NSAttributedString * contentStr = [[NSAttributedString alloc] initWithString:@""];
     NSMutableString * totalHtmlstring = [[NSMutableString alloc] initWithString:[contentStr toHtmlString]];
     [totalHtmlstring replaceCharactersInRange:[totalHtmlstring rangeOfString:@"<body>\n</body>"] withString:htmlStr];
-    
-    [self setRichTextViewTotalHtmlStr:totalHtmlstring andImageArr:imageArr];
+    [self setRichTextViewTotalHtmlStr:totalHtmlstring];
+    if (downloadImageBlock) {
+        downloadImageBlock([self getImageUrlsFromHtml:htmlStr]);
+    }
 }
 
-- (void)setRichTextViewTotalHtmlStr:(NSString *)htmlStr andImageArr:(NSArray<UIImage *> *)imageArr {
-    [_imageArr removeAllObjects];
-    [_imageArr addObjectsFromArray:imageArr];
-    static NSInteger i = 0;
+- (NSArray *) getImageUrlsFromHtml:(NSString *)webString {
+    NSMutableArray * imageurlArray = [NSMutableArray arrayWithCapacity:1];
+    //标签匹配
+    NSString *parten = @"<img(.*?)>";
+    NSError* error = NULL;
+    NSRegularExpression *reg = [NSRegularExpression regularExpressionWithPattern:parten options:0 error:&error];
+    
+    NSArray* match = [reg matchesInString:webString options:0 range:NSMakeRange(0, [webString length] - 1)];
+    for (NSTextCheckingResult * result in match) {
+        //过去数组中的标签
+        NSRange range = [result range];
+        NSString * subString = [webString substringWithRange:range];
+        
+        //从图片中的标签中提取ImageURL
+        NSRegularExpression *subReg = [NSRegularExpression regularExpressionWithPattern:@"http://(.*?)\"" options:0 error:NULL];
+        NSArray* match = [subReg matchesInString:subString options:0 range:NSMakeRange(0, [subString length] - 1)];
+        NSTextCheckingResult *subRes = match[0];
+        NSRange subRange = [subRes range];
+        subRange.length = subRange.length - 1;
+        NSString *imagekUrl = [subString substringWithRange:subRange];
+        
+        //将提取出的图片URL添加到图片数组中
+        [imageurlArray addObject:imagekUrl];
+    }
+    return imageurlArray;
+}
+
+- (void)setRichTextViewTotalHtmlStr:(NSString *)htmlStr {
     _textView.attributedText = [htmlStr toAttributedString];
-    NSMutableAttributedString *contentStr = [[NSMutableAttributedString alloc] initWithAttributedString:[htmlStr toAttributedString]];
-    [contentStr enumerateAttribute:NSAttachmentAttributeName
-                           inRange:NSMakeRange(0, contentStr.length)
-                           options:0
-                        usingBlock:^(id value, NSRange range, BOOL *stop) {
-                            if (value && [value isKindOfClass:[NSTextAttachment class]]) {
-                                //                NSTextAttachment * imageAttach = value;
-                                //                NSLog(@"%@.....%@",imageAttach.image,imageAttach);
-                                //                if (imageAttach.image) {
-                                //                    [self setImageText:imageAttach withRange:range appenReturn:NO];
-                                //                }
-                                //                //设置图片
-                                [self setImageText:imageArr[i] withRange:range appenReturn:NO];
-                                i = i + 1;
-                            }
-                        }];
     if (_textView.attributedText.length > 0) {
         self.placeholderLabel.hidden = YES;
-        }
-    
+    }
     _textView.font = [UIFont systemFontOfSize:DefaultFont];
+}
+
+- (void)setRichTextViewImageArr:(NSArray<UIImage *> *)imageArr {
+    [_imageArr removeAllObjects];
+    [_imageArr addObjectsFromArray:imageArr];
+    _imageIndex = 0;
+    NSMutableAttributedString *contentStr = [[NSMutableAttributedString alloc] initWithAttributedString:_textView.attributedText];
+    [contentStr enumerateAttribute:NSAttachmentAttributeName inRange:NSMakeRange(0, contentStr.length) options:0 usingBlock:^(id value, NSRange range, BOOL *stop) {
+        if (value && [value isKindOfClass:[NSTextAttachment class]]) {
+            //设置图片
+            [self setImageText:imageArr[_imageIndex] withRange:range appenReturn:NO];
+            _imageIndex++;
+        }
+    }];
 }
 
 #pragma mark ----------------编辑完成button-----------------
@@ -136,13 +162,9 @@
     if (self.doneButtonBlock) {
         self.doneButtonBlock(_imageArr);
     }
-//    NSArray *arr = [_textView.attributedText getImgaeArray];
-//    [self setRichTextViewHtmlStr:@"tttttttt"];
-//    NSLog(@"%@", [self retureHtmlStrWithImageArr:@[@"http://pic32.nipic.com/20130829/12906030_124355855000_2.png"]]);
-//    [self setRichTextViewHtmlStr:[self retureHtmlStrWithImageArr:@[@"<img src=\"http://pic32.nipic.com/20130829/12906030_124355855000_2.png\"/>"]] andImageArr:@[_imageTEMP]];
 }
 
-//*必须****传入imageUrlArr得到HtmlString
+#pragma mark *必须****传入imageUrlArr得到HtmlString
 - (NSString *)retureHtmlStrWithImageArr:(NSArray <NSString *> *)imageUrlArr {
     return [self returnBodyHtmlstringFromTotalHtmlString:[self replacetagWithImageUrlArray:imageUrlArr]];
 }
@@ -155,21 +177,15 @@
 
 //拼接图片地址,完整html
 - (NSString *)replacetagWithImageUrlArray:(NSArray *)picArr {
-    
     NSMutableAttributedString * contentStr=[[NSMutableAttributedString alloc]initWithAttributedString:_textView.attributedText];
     
-    [contentStr enumerateAttribute:NSAttachmentAttributeName inRange:NSMakeRange(0, contentStr.length)
-                           options:0
-                        usingBlock:^(id value, NSRange range, BOOL *stop) {
-                            if (value && [value isKindOfClass:[ImageTextAttachment class]]) {
-                                
-                                [contentStr replaceCharactersInRange:range withString:RICHTEXT_IMAGE];
-                                
-                            }
-                        }];
+    [contentStr enumerateAttribute:NSAttachmentAttributeName inRange:NSMakeRange(0, contentStr.length) options:0 usingBlock:^(id value, NSRange range, BOOL *stop) {
+        if (value && [value isKindOfClass:[ImageTextAttachment class]]) {
+            [contentStr replaceCharactersInRange:range withString:RICHTEXT_IMAGE];
+        }
+    }];
     
     NSMutableString * mutableStr=[[NSMutableString alloc]initWithString:[contentStr toHtmlString]];
-    
     //这里是把字符串分割成数组，
     NSArray * strArr=[mutableStr  componentsSeparatedByString:RICHTEXT_IMAGE];
     NSString * newContent=@"";
@@ -183,11 +199,8 @@
         NSString * cutStr=[strArr objectAtIndex:i];
         newContent=[NSString stringWithFormat:@"%@%@%@",newContent,cutStr,imgTag];
     }
-    
     return newContent;
-    
 }
-
 
 #pragma mark ----------------添加图片button-----------------
 - (void)imageButtonAction {
@@ -226,9 +239,9 @@
     }
 //    _imageTEMP = image;
     //图片添加后 自动换行
+    [self.textView becomeFirstResponder];
     [self setImageText:image withRange:self.textView.selectedRange appenReturn:YES];
     
-    [self.textView becomeFirstResponder];
 }
 //设置图片
 - (void)setImageText:(UIImage *)img withRange:(NSRange)range appenReturn:(BOOL)appen {
@@ -306,48 +319,20 @@
     _textView.font = [UIFont systemFontOfSize:DefaultFont];
 }
 
-#pragma mark ---------------------textViewDelegate--------------------
-/**
- *  点击图片触发代理事件
- */
-- (BOOL)textView:(UITextView *)textView shouldInteractWithTextAttachment:(NSTextAttachment *)textAttachment inRange:(NSRange)characterRange {
-    NSLog(@"%@", textAttachment);
-    return NO;
-}
-
-/**
- *  点击链接，触发代理事件
- */
-- (BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange {
-    [[UIApplication sharedApplication] openURL:URL];
-    return YES;
-}
-- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
-    //    textview 改变字体的行间距
-    
-    return YES;
-}
+#pragma mark ------------------textViewDelegate----------------
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     
-    if (range.length == 1) // 回删
-    {
-        
+    if (range.length == 1) {
         return YES;
     } else {
-        
         // 超过长度限制
         if ([textView.text length] >= MaxLength + 3) {
-            
             return NO;
         }
     }
-    
     return YES;
 }
-//- (void)textViewDidChangeSelection:(UITextView *)textView;
-//{
-//    NSLog(@"焦点改变");
-//}
+
 - (void)textViewDidChange:(UITextView *)textView {
     
     if (self.textView.attributedText.length > 0) {
@@ -355,67 +340,9 @@
     } else {
         self.placeholderLabel.hidden = NO;
     }
-//    NSInteger len = textView.attributedText.length - self.locationStr.length;
-//    if (len > 0) {
-//        
-//        self.isDelete = NO;
-//        self.newRange =
-//        NSMakeRange(self.textView.selectedRange.location - len, len);
-//        self.newstr = [textView.text substringWithRange:self.newRange];
-//    } else {
-//        self.isDelete = YES;
-//    }
-//    //# warning  如果出现输入问题，检查这里
-//    bool isChinese; //判断当前输入法是否是中文
-//    
-//    if ([[[textView textInputMode] primaryLanguage] isEqualToString:@"en-US"]) {
-//        isChinese = false;
-//    } else {
-//        isChinese = true;
-//    }
-//    NSString *str =
-//    [[self.textView text] stringByReplacingOccurrencesOfString:@"?"
-//                                                    withString:@""];
-//    if (isChinese) { //中文输入法下
-//        UITextRange *selectedRange = [self.textView markedTextRange];
-//        //获取高亮部分
-//        UITextPosition *position =
-//        [self.textView positionFromPosition:selectedRange.start offset:0];
-//        // 没有高亮选择的字，则对已输入的文字进行字数统计和限制
-//        if (!position) {
-//            //            NSLog(@"汉字");
-//            //            [self setStyle];
-//            if (str.length >= MaxLength) {
-//                NSString *strNew = [NSString stringWithString:str];
-//                [self.textView setText:[strNew substringToIndex:MaxLength]];
-//            }
-//        } else {
-//            //            NSLog(@"没有转化--%@",str);
-//            if ([str length] >= MaxLength + 10) {
-//                NSString *strNew = [NSString stringWithString:str];
-//                [self.textView setText:[strNew substringToIndex:MaxLength + 10]];
-//            }
-//        }
-//    } else {
-//        //        NSLog(@"英文");
-//        
-//        //        [self setStyle];
-//        if ([str length] >= MaxLength) {
-//            NSString *strNew = [NSString stringWithString:str];
-//            [self.textView setText:[strNew substringToIndex:MaxLength]];
-//        }
-//    }
-    
-//    NSLog(@"%@", textView.attributedText);
 }
 
-- (void)textViewDidEndEditing:(UITextView *)textView {
-    
-    
-}
-
-#pragma mark - Keyboard notification
-
+#pragma mark ------------Keyboard notification(视图偏移)-------
 - (void)onKeyboardNotification:(NSNotification *)notification {
     //Reset constraint constant by keyboard height
     if ([notification.name isEqualToString:UIKeyboardWillShowNotification]) {
