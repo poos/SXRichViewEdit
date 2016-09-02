@@ -20,19 +20,19 @@ typedef void(^DownloadImageBlock)(NSArray *imageUrlArr);
 
 //- (void)setDoneButton
 
-//*必须****初始化方法
+//*必须*****初始化方法
 - (instancetype)initWithFrame:(CGRect)frame andSelfCon:(UIViewController *)selfCon;
 
-//*必须****点击确定时候调用,应在block中发起网络请求,请求图片url
+//*必须*****点击确定时候调用,应在block中发起网络请求,请求图片url
 - (void)setDoneButtonBlock:(DoneButtonBlock)doneButtonBlock;
 
-//*必须****传入imageUrlArr得到HtmlString
+//*必须*****传入imageUrlArr得到HtmlString
 - (NSString *)retureHtmlStrWithImageArr:(NSArray <NSString *> *)imageUrlArr;
 
-//*****设置内容，二次编辑传入htmlString, <建议传入image,传入image会调用set方法>
+//*****设置内容，二次编辑传入htmlString, !!!!<downloadImageBlock建议传为空,自动网上下载设置图片,不为空block中返回图片url网址>
 - (void)setRichTextViewHtmlStr:(NSString *)htmlStr andDownloadImageBlock:(DownloadImageBlock)downloadImageBlock ;
 
-//*****设置内容,二次编辑的图片
+//**设置内容,二次编辑的图片,downloadImageBlock中下载完成调用
 - (void)setRichTextViewImageArr:(NSArray<UIImage *> *)imageArr;
 
 

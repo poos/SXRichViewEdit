@@ -12,6 +12,7 @@
 
 #import "SXRichViewEdit.h"
 #import "SXRich.h"
+#import "SDWebImageDownloader.h"
 
 #define IMAGE_MAX_SIZE 365
 #define DefaultFont (16)
@@ -37,7 +38,8 @@
 @property (nonatomic, assign) CGRect                    selfNewFrame;//弹起键盘的位置
 
 @property (nonatomic, assign) NSInteger                 imageIndex;//加载的图片index
-
+@property (nonatomic, assign) NSInteger                 iamgeDownloadAllCount;//下载图片所有个数
+@property (nonatomic, strong) NSMutableArray            *imageDownloadArr;//加载的图片index
 
 @property (nonatomic, strong) UIButton                  *imgButton;
 @property (nonatomic, strong) UIButton                  *doneButton;
@@ -62,6 +64,7 @@
 
 - (void)initData {
     self.backgroundColor = [UIColor grayColor];
+    _iamgeDownloadAllCount = -1;
     _imageArr = [[NSMutableArray alloc] initWithCapacity:0];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onKeyboardNotification:) name:UIKeyboardWillHideNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onKeyboardNotification:) name:UIKeyboardWillShowNotification object:nil];
@@ -104,6 +107,31 @@
     [self setRichTextViewTotalHtmlStr:totalHtmlstring];
     if (downloadImageBlock) {
         downloadImageBlock([self getImageUrlsFromHtml:htmlStr]);
+    } else {
+        [self setLoadImages:[self getImageUrlsFromHtml:htmlStr]];
+    }
+}
+
+- (void)setLoadImages:(NSArray *)urlArr {
+    _iamgeDownloadAllCount = urlArr.count;
+    _imageDownloadArr = [[NSMutableArray alloc] initWithCapacity:0];
+    for (NSString * urlImage in urlArr) {
+        [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:urlImage] options:0 progress:nil completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
+            if (image) {
+                UIImage *image1 = [UIImage imageWithData:data];
+                [_imageDownloadArr addObject:image1];
+                [self refreshTextImageView];
+            }
+        }];
+    }
+}
+
+- (void)refreshTextImageView {
+    if (_imageDownloadArr.count == _iamgeDownloadAllCount) {
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            /* Do UI work here */
+            [self setRichTextViewImageArr:_imageDownloadArr];
+        });
     }
 }
 
@@ -229,7 +257,6 @@
 
 #pragma mark - image picker delegte
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
     [picker dismissViewControllerAnimated:YES completion:nil];
     
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
@@ -237,23 +264,19 @@
     if (self.textView.textStorage.length > 0) {
         [self appenReturn];
     }
-//    _imageTEMP = image;
+    //    _imageTEMP = image;
     //图片添加后 自动换行
     [self.textView becomeFirstResponder];
     [self setImageText:image withRange:self.textView.selectedRange appenReturn:YES];
-    
 }
 //设置图片
 - (void)setImageText:(UIImage *)img withRange:(NSRange)range appenReturn:(BOOL)appen {
     [_imageArr addObject:img];
     UIImage *image = img;
-    
     if (image == nil) {
         return;
     }
-    
-    if (![image isKindOfClass:[UIImage class]]) // UIImage资源
-    {
+    if (![image isKindOfClass:[UIImage class]]) {
         
         return;
     }
@@ -264,7 +287,6 @@
     }
     
     ImageTextAttachment *imageTextAttachment = [ImageTextAttachment new];
-    
     // Set tag and image
     imageTextAttachment.imageTag = RICHTEXT_IMAGE;
     imageTextAttachment.image = image;
@@ -274,23 +296,15 @@
     
     if (appen) {
         // Insert image image
-        [_textView.textStorage
-         insertAttributedString:
-         [NSAttributedString attributedStringWithAttachment:imageTextAttachment] atIndex:range.location];
+        [_textView.textStorage insertAttributedString:[NSAttributedString attributedStringWithAttachment:imageTextAttachment] atIndex:range.location];
     } else {
         if (_textView.textStorage.length > 0) {
-            
-            // Insert image image
-            [_textView.textStorage
-             replaceCharactersInRange:range
-             withAttributedString:
-             [NSAttributedString
-              attributedStringWithAttachment:imageTextAttachment]];
+            [_textView.textStorage replaceCharactersInRange:range withAttributedString:[NSAttributedString attributedStringWithAttachment:imageTextAttachment]];
         }
     }
     
-    // Move selection location
-    _textView.selectedRange = NSMakeRange(range.location + 1, range.length);
+//    // Move selection location
+//    _textView.selectedRange = NSMakeRange(range.location + 1, range.length);
     
     //设置locationStr的设置
     [self setInitLocation];
@@ -303,8 +317,7 @@
 - (void)setInitLocation {
     
     self.locationStr = nil;
-    self.locationStr = [[NSMutableAttributedString alloc]
-                        initWithAttributedString:self.textView.attributedText];
+    self.locationStr = [[NSMutableAttributedString alloc] initWithAttributedString:self.textView.attributedText];
     if (self.textView.textStorage.length > 0) {
         self.placeholderLabel.hidden = YES;
     }

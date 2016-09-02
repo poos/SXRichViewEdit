@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SXRichViewEdit"
-  s.version      = "0.8.5"
+  s.version      = "0.8.9"
   s.summary      = "create a richView, can edit, upload html"
   #s.description  = <<-DESC
   #                  DESC
@@ -34,6 +34,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "SDWebImage", "~> 3.8"
+  s.dependency "SDWebImage", "~> 3.8"
 
 end

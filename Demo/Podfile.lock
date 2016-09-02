@@ -1,0 +1,16 @@
+PODS:
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+  - SXImagePicker (0.0.2):
+    - SDWebImage (~> 3.8)
+
+DEPENDENCIES:
+  - SDWebImage (~> 3.7)
+  - SXImagePicker
+
+SPEC CHECKSUMS:
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SXImagePicker: aa9afd452ea45f2c96eb3bdaaaae34ceb734b24e
+
+COCOAPODS: 0.39.0

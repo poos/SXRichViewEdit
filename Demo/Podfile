@@ -1,0 +1,2 @@
+pod 'SXImagePicker'
+pod 'SDWebImage', '~>3.7'
