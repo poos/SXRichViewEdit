@@ -12,12 +12,15 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^DoneButtonBlock)();
+typedef void(^DoneButtonBlock)(NSArray *imageArr);
 
 @interface SXRichViewEdit : UIView
 
 //*必须****点击确定时候调用,应在block中发起网络请求,请求图片url
 @property (nonatomic, copy) DoneButtonBlock doneButtonBlock;
+
+//- (void)setDoneButton
+
 //*必须****初始化方法
 - (instancetype)initWithFrame:(CGRect)frame andSelfCon:(UIViewController *)selfCon;
 //*必须****传入imageUrlArr得到HtmlString
