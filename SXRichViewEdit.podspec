@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SXRichViewEdit"
-  s.version      = "0.9.1"
+  s.version      = "0.9.5"
   s.summary      = "create a richView, can edit, upload html"
   #s.description  = <<-DESC
   #                  DESC
