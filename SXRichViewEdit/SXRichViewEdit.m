@@ -15,7 +15,7 @@
 #import "SDWebImageDownloader.h"
 
 #define IMAGE_MAX_SIZE 365
-#define DefaultFont (16)
+#define DefaultFont ((Scaled(14)))
 #define MaxLength (1000) //最大选中删除字符数
 #define RICHTEXT_IMAGE (@"[UIImageView]")
 #define ImageButtonFrame CGRectMake(self.frame.size.width - 120, self.frame.size.height - 40, 50, 40)
@@ -25,7 +25,6 @@
 
 @property (nonatomic, weak  ) UIViewController          *selfController;
 @property (nonatomic, strong) UITextView                *textView;
-@property (nonatomic, strong) UILabel                   *placeholderLabel;//默认提示字
 @property (nonatomic, assign) NSRange                   newRange;//记录最新内容的range
 @property (nonatomic, strong) NSString                  *newstr;//记录最新内容的字符串
 @property (nonatomic, assign) NSUInteger                location;//纪录变化的起始位置
@@ -70,6 +69,14 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onKeyboardNotification:) name:UIKeyboardWillShowNotification object:nil];
 }
 
+- (void)setHideButton:(BOOL)hideButton {
+    _hideButton = hideButton;
+    if (hideButton) {
+        _imgButton.hidden = YES;
+        _doneButton.hidden = YES;
+    }
+}
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -92,10 +99,7 @@
     _doneButton.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     [_doneButton addTarget:self action:@selector(doneButtonAction) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_doneButton];
-    if (_hideButton) {
-        _imgButton.hidden = YES;
-        _doneButton.hidden = YES;
-    }
+    
 }
 
 #pragma mark ---------------设置内容，二次编辑-----------------
@@ -221,7 +225,7 @@
         
         NSString * imgTag=@"";
         if (i<picArr.count) {
-                imgTag=picArr[i];
+            imgTag=[NSString stringWithFormat:@"<img src=\"%@\" />",picArr[i]];
         }
         //因为cutstr 可能是null
         NSString * cutStr=[strArr objectAtIndex:i];
@@ -311,6 +315,7 @@
     if (appen) {
         [self appenReturn];
     }
+    self.textView.font = [UIFont systemFontOfSize:DefaultFont];
     [self.textView setSelectedRange:NSMakeRange(self.textView.attributedText.length, 0)];
 }
 
@@ -335,6 +340,18 @@
 #pragma mark ------------------textViewDelegate----------------
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithAttributedString:_textView.attributedText];
+    [attributedString enumerateAttribute:NSAttachmentAttributeName inRange:range options:0 usingBlock:^(id value, NSRange range, BOOL *stop) {
+        if (value && [value isKindOfClass:[ImageTextAttachment class]]) {
+            ImageTextAttachment *imageAttach = (ImageTextAttachment *)value;
+            UIImage * selImage = imageAttach.image;
+//            for (UIImage * imageTemp in _imageArr) {
+//                if ([imageTemp isEqual:selImage]) {
+                    [_imageArr removeObject:selImage];
+//                }
+//            }
+        }
+    }];
     if (range.length == 1) {
         return YES;
     } else {
@@ -343,6 +360,7 @@
             return NO;
         }
     }
+    
     return YES;
 }
 
@@ -370,7 +388,7 @@
         }
         
         CGRect keyboardFrame = ((NSValue *) notification.userInfo[UIKeyboardFrameEndUserInfoKey]).CGRectValue;
-        CGFloat hideHeight = keyboardFrame.size.height -([UIScreen mainScreen].bounds.size.height - 20 - self.frame.origin.y - self.frame.size.height);
+        CGFloat hideHeight = keyboardFrame.size.height -([UIScreen mainScreen].bounds.size.height - self.frame.origin.y - self.frame.size.height)+Scaled(44);
         _selfNewFrame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height - hideHeight);
         [UIView animateWithDuration:0.8f animations:^{
             self.frame = _selfNewFrame;
