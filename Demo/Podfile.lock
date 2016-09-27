@@ -1,16 +1,15 @@
 PODS:
-  - SDWebImage (3.8.1):
-    - SDWebImage/Core (= 3.8.1)
-  - SDWebImage/Core (3.8.1)
-  - SXImagePicker (0.0.2):
-    - SDWebImage (~> 3.8)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - TZImagePickerController (1.6.7)
 
 DEPENDENCIES:
   - SDWebImage (~> 3.7)
-  - SXImagePicker
+  - TZImagePickerController (~> 1.6.2)
 
 SPEC CHECKSUMS:
-  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
-  SXImagePicker: aa9afd452ea45f2c96eb3bdaaaae34ceb734b24e
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  TZImagePickerController: d3b16a1ab3393b251a23fbb22ac2d6bc83a50d5f
 
 COCOAPODS: 0.39.0

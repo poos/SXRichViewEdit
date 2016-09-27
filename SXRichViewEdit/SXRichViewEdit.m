@@ -15,7 +15,7 @@
 #import "SDWebImageDownloader.h"
 
 #define IMAGE_MAX_SIZE 365
-#define DefaultFont ((Scaled(14)))
+#define DefaultFont (16)
 #define MaxLength (1000) //最大选中删除字符数
 #define RICHTEXT_IMAGE (@"[UIImageView]")
 #define ImageButtonFrame CGRectMake(self.frame.size.width - 120, self.frame.size.height - 40, 50, 40)
@@ -388,7 +388,7 @@
         }
         
         CGRect keyboardFrame = ((NSValue *) notification.userInfo[UIKeyboardFrameEndUserInfoKey]).CGRectValue;
-        CGFloat hideHeight = keyboardFrame.size.height -([UIScreen mainScreen].bounds.size.height - self.frame.origin.y - self.frame.size.height)+Scaled(44);
+        CGFloat hideHeight = keyboardFrame.size.height -([UIScreen mainScreen].bounds.size.height - self.frame.origin.y - self.frame.size.height);
         _selfNewFrame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height - hideHeight);
         [UIView animateWithDuration:0.8f animations:^{
             self.frame = _selfNewFrame;

@@ -29,7 +29,7 @@ typedef void(^DownloadImageBlock)(NSArray *imageUrlArr);
 //*必须*****传入imageUrlArr得到HtmlString
 - (NSString *)retureHtmlStrWithImageArr:(NSArray <NSString *> *)imageUrlArr;
 
-//*****设置内容，二次编辑传入htmlString, !!!!<downloadImageBlock建议传为空,自动网上下载设置图片,不为空block中返回图片url网址>
+//*****设置内容，二次编辑传入htmlString, !!!!<downloadImageBlock建议传为空,自动网上下载设置图片,不为空block中返回图片url网址,自行下载>
 - (void)setRichTextViewHtmlStr:(NSString *)htmlStr andDownloadImageBlock:(DownloadImageBlock)downloadImageBlock ;
 
 //**设置内容,二次编辑的图片,downloadImageBlock中下载完成调用
@@ -37,11 +37,13 @@ typedef void(^DownloadImageBlock)(NSArray *imageUrlArr);
 
 
 /****
-    以下定制方法
-    隐藏button在外部调用
+ 以下定制方法
+ 隐藏button在外部调用
  */
 //是否显示 '添加图片button' 和 '完成button' ,默认NO
 @property (nonatomic, assign) BOOL hideButton;
+//提示文字,默认"输入内容..."
+@property (nonatomic, strong) UILabel                   *placeholderLabel;//默认提示字
 //添加图片按钮被点击
 - (void)imageButtonAction;
 //完成按钮被点击

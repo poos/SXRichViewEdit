@@ -37,11 +37,13 @@ typedef void(^DownloadImageBlock)(NSArray *imageUrlArr);
 
 
 /****
-    以下定制方法
-    隐藏button在外部调用
+ 以下定制方法
+ 隐藏button在外部调用
  */
 //是否显示 '添加图片button' 和 '完成button' ,默认NO
 @property (nonatomic, assign) BOOL hideButton;
+//提示文字,默认"输入内容..."
+@property (nonatomic, strong) UILabel                   *placeholderLabel;//默认提示字
 //添加图片按钮被点击
 - (void)imageButtonAction;
 //完成按钮被点击

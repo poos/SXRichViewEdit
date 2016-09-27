@@ -1,2 +1,2 @@
-pod 'SXImagePicker'
+pod 'TZImagePickerController', '~>1.6.2'
 pod 'SDWebImage', '~>3.7'

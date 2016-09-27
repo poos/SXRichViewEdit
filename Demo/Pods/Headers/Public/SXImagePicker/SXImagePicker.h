@@ -1,1 +1,0 @@
-../../../SXImagePicker/SXImagePicker/SXImagePicker.h

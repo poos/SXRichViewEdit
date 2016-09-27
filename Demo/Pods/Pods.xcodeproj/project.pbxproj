@@ -10,14 +10,36 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>00A4FFCCBFA454FBAD1976A8DF73FD0F</key>
+		<key>0043E27F8CC7078693C2CEC45C22800F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4630A6644E76AADF263AE66897C3F8DF</string>
+			<string>9CF14D7A84E10F24DA32D9A9B8EB5417</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
-		<key>00C9F805B5B46E22DF039E3168F37796</key>
+		<key>024FC1C87D886056442683F483F49002</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libTZImagePickerController.a</string>
+			<key>path</key>
+			<string>libTZImagePickerController.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>02B82038EE0007911C67FA1E31794898</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -26,40 +48,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>SXImagePicker.h</string>
+			<string>SDImageCache.h</string>
 			<key>path</key>
-			<string>SXImagePicker/SXImagePicker.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>01F843E01D1848B0DE97D90C12C6F44E</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>F990A83428E4E9F12072831BF8F2748B</string>
-				<string>4CDE2694A1F17D3E6F8A2E71CEC5C3E4</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>03360EA89E07742168BA23D6F4986DF4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>6AADEB96BA5C11B0C2D83914F55C41B1</string>
-				<string>61D40B470D4027305CE38AEE7C91E282</string>
-				<string>140A0B5AD9839F7E9CAF939AB6145C02</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/SDWebImage</string>
+			<string>SDWebImage/SDImageCache.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -76,32 +67,51 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>052D46D6790B4DFCE0521CCE917BEC27</key>
+		<key>0461B92A8E2F5EA07E53288CE32E5579</key>
 		<dict>
-			<key>buildConfigurationList</key>
-			<string>9F002B28D755C099843BF5A8852C4E3B</string>
-			<key>buildPhases</key>
-			<array>
-				<string>87384FBF57887A0808FFA29483E3564A</string>
-				<string>992D38A0430A8787C52790DAEADCF57E</string>
-				<string>E5BB5DC467804BB092AEE4593ED51A56</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
+			<key>fileRef</key>
+			<string>6DA4FEE7ED7616B57CA8181A8EA50E8E</string>
 			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>SDWebImage</string>
-			<key>productName</key>
-			<string>SDWebImage</string>
-			<key>productReference</key>
-			<string>99D6B48F49B893BFE548E4A565537042</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>058F9108EC9B236E10C2C04FD96EA55C</key>
+		<key>06A511A365280387B8D2F1E42DB7AFF5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2AE048A8CF58BEEAA3395F86FFD8BCAB</string>
+				<string>27D71B68B62C9F979D6EC3FB133A13E9</string>
+				<string>2EB325DDC3A7CC5526AC6E4A3FE2B625</string>
+				<string>4C6BB869D94E6191F1DBE892F92DAECE</string>
+				<string>764B22E7E608450BAB32BCD1707599B7</string>
+				<string>11768EEA0983B74C7377EA3A28BE0C9C</string>
+				<string>58B6E05BC023FDAEF7EE80AF313703B5</string>
+				<string>45745C78D3B6CAC1881BA4EBD6035156</string>
+				<string>848BEE33CD60FA827082C64FA10B003F</string>
+				<string>07A2FA8845A9E634249E343AEE77F743</string>
+				<string>0F63AE69B9F112C7BD879883334F33B0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>07A2FA8845A9E634249E343AEE77F743</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B30FD48801E6969783A6BD6822A906A0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0A0CB0AE9D895982A34B239F28B2A4ED</key>
+		<dict>
+			<key>fileRef</key>
+			<string>24F225F254B4A849F6694F7EC5BF757E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0B5774F9DA64014632CBA13B0B2DCF16</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -109,32 +119,14 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIButton+WebCache.h</string>
 			<key>path</key>
-			<string>SXImagePicker-prefix.pch</string>
+			<string>SDWebImage/UIButton+WebCache.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>05AE3C76B6DBCBAAF2C390A7F0606005</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>052D46D6790B4DFCE0521CCE917BEC27</string>
-			<key>remoteInfo</key>
-			<string>SDWebImage</string>
-		</dict>
-		<key>09106E6E2103A871D62C3AC949D382F0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C6C77ADB459D3CC756C56B1DBA5862C2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0B68B5AD5A086F9BAD37AD8D2B7E478B</key>
+		<key>0D332C786CF482C2830E2360A7FF052D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -143,38 +135,44 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>UIImageView+WebCache.m</string>
+			<string>NSBundle+TZImagePicker.m</string>
 			<key>path</key>
-			<string>SDWebImage/UIImageView+WebCache.m</string>
+			<string>TZImagePickerController/TZImagePickerController/NSBundle+TZImagePicker.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0C368522C6A78AB7F4F31481573C5F99</key>
+		<key>0DB448968A0FD1EB47DF1A5745D2687A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>EE97BB76C6686CEC78E9FB87AEB79B42</string>
+			<string>60FE6DABD8FF9B51708EF00F757E0E33</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
-		<key>0F40967E83B6C513C97405AEE377C2BD</key>
+		<key>0F49BDB2F6A51DA41370CA9367D2D1B2</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildConfigurations</key>
+			<array>
+				<string>7FD21EAD2B53EB6DA192E383602D719B</string>
+				<string>FAF4D862496DE07FC31ADB48A8DE77CB</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIImageView+WebCache.h</string>
-			<key>path</key>
-			<string>SDWebImage/UIImageView+WebCache.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>XCConfigurationList</string>
 		</dict>
-		<key>104F818425E76DA08081B217000F986A</key>
+		<key>0F63AE69B9F112C7BD879883334F33B0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D91A3C0EC5F40A42732EEC836992D998</string>
+			<string>4C245F50682925A6F71D5A4E85B400F5</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -191,86 +189,86 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>12E3B658C4241DCD64459D824907C9C2</key>
+		<key>11161BA7330E2CC106F904F3684417C1</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>92161F64DEF5181B8F4D2AD6DF4F9243</string>
+			<key>buildPhases</key>
+			<array>
+				<string>06A511A365280387B8D2F1E42DB7AFF5</string>
+				<string>FE3C96CF300248BB28D5920E9FDBF2B9</string>
+				<string>B4BD8AF81AFA097C4A68E32BD52CF4F0</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>TZImagePickerController</string>
+			<key>productName</key>
+			<string>TZImagePickerController</string>
+			<key>productReference</key>
+			<string>024FC1C87D886056442683F483F49002</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>11768EEA0983B74C7377EA3A28BE0C9C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C1FE3C223DE63FD5810A6C9900D5E395</string>
+			<string>20D6E5D7EC24FC8DC458A91F0257A00D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>140A0B5AD9839F7E9CAF939AB6145C02</key>
+		<key>155E1B7985D2D43F69446B5FEB638C19</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SDWebImage-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>11161BA7330E2CC106F904F3684417C1</string>
+			<key>remoteInfo</key>
+			<string>TZImagePickerController</string>
 		</dict>
-		<key>16390572B81D2F595D16DB1A657644DE</key>
+		<key>15AC7D14322F71CE20C6E5B27CB66E3C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F557FD8311BD92F2EBB32915A8B1297D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1B504A0E600A9BA3CFCC81960E617B2C</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
-				<string>00A4FFCCBFA454FBAD1976A8DF73FD0F</string>
+				<string>80FAE6A844988D0A33141320F0DC8081</string>
+				<string>F5399FDC90C572AB0BC3F53CE77593A2</string>
+				<string>A4278902721942537A11AB89B67FE623</string>
+				<string>C3C0463360B27E0F8B1920AEDBA50459</string>
+				<string>89D9C47842681733DD65B155FDF034B8</string>
+				<string>2A06ED8815370344E4D7491B9CEA2DA2</string>
+				<string>BE5249C5FA3A3A1B47D52F3E8105FCE6</string>
+				<string>15AC7D14322F71CE20C6E5B27CB66E3C</string>
+				<string>31BCD511C009BB7F5DAE7966E935AAC0</string>
+				<string>AE2C6AC8B1141E235A0218FB73EAB0C0</string>
+				<string>D7C8033D4F4343541A033F74D0BEEEE2</string>
+				<string>0A0CB0AE9D895982A34B239F28B2A4ED</string>
+				<string>72BEC665BA8808E46FA47A18BEC6CAE5</string>
+				<string>D87BAE1EA4FE0064DC0B3F79F490DBCE</string>
+				<string>0461B92A8E2F5EA07E53288CE32E5579</string>
 			</array>
 			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
+			<string>PBXSourcesBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>18546C7152B45A4E42C5BB19B40EB578</key>
-		<dict>
-			<key>fileRef</key>
-			<string>00C9F805B5B46E22DF039E3168F37796</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>1ABB6D677CA75DB3FB2872EF13DE5764</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9A30FBCCCF62B020390F927EF1841D1B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1CCEBF35DE477F72A087FA06488BD652</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E73303D69EBFFE77F5A5C8DCCB63A14B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>1EDACE7555A136998312B00517B20B49</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>SDWebImage</string>
-			<key>target</key>
-			<string>052D46D6790B4DFCE0521CCE917BEC27</string>
-			<key>targetProxy</key>
-			<string>D1582670678BF7142ECDB666B8A6817E</string>
-		</dict>
-		<key>23039370F64FAD70CD6E1FB6C486E519</key>
+		<key>1C16141D62DD3C8DB64E3926B897E86A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -279,36 +277,117 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>ViewImageController.h</string>
+			<string>TZImagePickerController.h</string>
 			<key>path</key>
-			<string>SXImagePicker/ViewImageController.h</string>
+			<string>TZImagePickerController/TZImagePickerController/TZImagePickerController.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>26FACB5CADAB36DDD22C3273CE1D4854</key>
+		<key>1DE8A2E39B0E6526B770ABA5BD91F7FF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TZPhotoPickerController.m</string>
+			<key>path</key>
+			<string>TZImagePickerController/TZImagePickerController/TZPhotoPickerController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F214E40814F44D9FB686EA6DF1C909E</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>5F166796A87310C7AC655E1FB1DA9843</string>
+			<key>buildPhases</key>
+			<array>
+				<string>51D987AE9519E3ACFEDA041A471E47E9</string>
+				<string>C57213C4FA7682968490CF74BF3AAD47</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>DEC1E8587C72C9D57BAAC8FD5113F536</string>
+				<string>CD9C1514D3D58E3DF35444E29BA905D0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>productName</key>
+			<string>Pods</string>
+			<key>productReference</key>
+			<string>54F2BFD9F5FFA3A741BB6979899B1900</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>2034C09FC3A3059503FBD097530F4774</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TZImagePickerController-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>206F5F25D8B8FB40979E8926560BFCE3</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>F9F80D0177E2AE5BA8024D973864718C</string>
+			<key>remoteInfo</key>
+			<string>SDWebImage</string>
+		</dict>
+		<key>20D6E5D7EC24FC8DC458A91F0257A00D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TZImagePickerController.m</string>
+			<key>path</key>
+			<string>TZImagePickerController/TZImagePickerController/TZImagePickerController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>20F53C4AFA7EC59A2B10C3BA6CFFDEB1</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>6AADEB96BA5C11B0C2D83914F55C41B1</string>
+			<string>98C98CDFB3F20F2925F6CD1F141BB14F</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
 				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/SDWebImage/SDWebImage-prefix.pch</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
 				<string>9.3</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
 				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
+				<string>NO</string>
 				<key>OTHER_LDFLAGS</key>
 				<string></string>
 				<key>OTHER_LIBTOOLFLAGS</key>
 				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
 				<key>PRODUCT_NAME</key>
 				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
 				<key>SDKROOT</key>
 				<string>iphoneos</string>
 				<key>SKIP_INSTALL</key>
@@ -317,7 +396,94 @@
 			<key>isa</key>
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>Debug</string>
+			<string>Release</string>
+		</dict>
+		<key>21818AE6D88196F7B878FC0138002744</key>
+		<dict>
+			<key>fileRef</key>
+			<string>272643F56613CA0D336AE3DBF19DC404</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>247327269920BF7F155BE1774FA0077F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>54F2BFD9F5FFA3A741BB6979899B1900</string>
+				<string>BA4B63650CF4A6D46757655B7FD65F9D</string>
+				<string>024FC1C87D886056442683F483F49002</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24F225F254B4A849F6694F7EC5BF757E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIImage+MultiFormat.m</string>
+			<key>path</key>
+			<string>SDWebImage/UIImage+MultiFormat.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>252B5D1961E3EC6F0297B9D7A5C3A8D5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SDWebImageOperation.h</string>
+			<key>path</key>
+			<string>SDWebImage/SDWebImageOperation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2597B1FB721A7B65D5932F1A58DB1A92</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TZImagePickerController-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>25F0584223B81AB960F8B6B14BD45707</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4630A6644E76AADF263AE66897C3F8DF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>26ECD9B1A54E709F3EF371ADB326265E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIImage+GIF.h</string>
+			<key>path</key>
+			<string>SDWebImage/UIImage+GIF.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>272643F56613CA0D336AE3DBF19DC404</key>
 		<dict>
@@ -332,20 +498,33 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>281832CEA781B74AAD1E9F5C17EA55CE</key>
+		<key>27D71B68B62C9F979D6EC3FB133A13E9</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>53BFDC06846E803D3AAB1872E0AB44A5</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>SDImageCache.m</string>
-			<key>path</key>
-			<string>SDWebImage/SDImageCache.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2977111DCAC2FCE74339E3581EBB8C9E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4630A6644E76AADF263AE66897C3F8DF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2A06ED8815370344E4D7491B9CEA2DA2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DA92548ADBF858DF07C217FE88A62594</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2AE048A8CF58BEEAA3395F86FFD8BCAB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0D332C786CF482C2830E2360A7FF052D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>2B389FAB51F6EEA43F72CA7BDC8E8E28</key>
 		<dict>
@@ -420,19 +599,19 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>2B3CA6BA4130CB158A21CCA130A70A6B</key>
+		<key>2BD11B3EBA406AD154BAD05F9488944F</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>18546C7152B45A4E42C5BB19B40EB578</string>
-				<string>BF6401133FF99D8A73168E3D8299C6AA</string>
-			</array>
+			<key>fileRef</key>
+			<string>EAD7BAFCBFD9140B7435D8805688AFDF</string>
 			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
 		<dict>
@@ -448,10 +627,118 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>2DCD8F0DC9779ABA93F851023C5A41D5</key>
+		<key>2EB325DDC3A7CC5526AC6E4A3FE2B625</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A0EDA909D16F3C3A18FCA88CB63FC864</string>
+			<string>4A8BB261EB310191DE7556920F0E6D47</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2F1DB78F247CA5E5DC274682E161D90A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>4E762F23EC34ED4A6FF3312D84E33A40</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>2F2C887CE169090510F6D2D7008CC795</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SDWebImageManager.h</string>
+			<key>path</key>
+			<string>SDWebImage/SDWebImageManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30326D31889B5C899FFAC4E99FBE9074</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DDF990ADE13E3C08BED7F5B4ADCBB818</string>
+				<string>721CA0DC5139F04A9A4495905827BAA9</string>
+				<string>9C4D4B6D4670261D40F08D8A6272A387</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/SDWebImage</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>30DB8B6298A2207B849DCD9ECE1302CE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SDWebImageDecoder.h</string>
+			<key>path</key>
+			<string>SDWebImage/SDWebImageDecoder.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>31BCD511C009BB7F5DAE7966E935AAC0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B4A2157B44763C479A4A8860B629C2E4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3575099F54584F36EB84037AEC776DE6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TZImageManager.m</string>
+			<key>path</key>
+			<string>TZImagePickerController/TZImagePickerController/TZImageManager.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3663638CED4C1404B38DD82CA76B6826</key>
+		<dict>
+			<key>fileRef</key>
+			<string>961578FA322C31FF1E5C0A560DA41BA6</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -462,16 +749,18 @@
 				</array>
 			</dict>
 		</dict>
-		<key>30FDE6F313B88535C0E23F48E2C063CD</key>
+		<key>370C417B00641BDE790A58946CA501A6</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>SDWebImage</string>
-			<key>target</key>
-			<string>052D46D6790B4DFCE0521CCE917BEC27</string>
-			<key>targetProxy</key>
-			<string>05AE3C76B6DBCBAAF2C390A7F0606005</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>TZImagePickerController.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>37DB56D75062CC75FCB0966E1C6E8A8E</key>
 		<dict>
@@ -486,52 +775,21 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3C7C4F0BF6B9CCDF5D867BC740ABAA9D</key>
+		<key>39BEEB1A642483E7DE11B5BFFCE17AEB</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>1C16141D62DD3C8DB64E3926B897E86A</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>SDWebImageCompat.m</string>
-			<key>path</key>
-			<string>SDWebImage/SDWebImageCompat.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
-		<key>3D504C3E050E2F302128ED1746AB5E14</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSData+ImageContentType.m</string>
-			<key>path</key>
-			<string>SDWebImage/NSData+ImageContentType.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>40BA2A218E576E068025B364DE6F816F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>54F58712D097BFBF223765D6764BAAA0</string>
-				<string>99D6B48F49B893BFE548E4A565537042</string>
-				<string>5AA7436235D2720C05F2C5F8DA902E08</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4131855CCD508A2E37777F52F8D2B3E8</key>
+		<key>3A9D3FCB210CD9AB18C990959137C20A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -540,9 +798,60 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>UIButton+WebCache.h</string>
+			<string>TZAssetCell.h</string>
 			<key>path</key>
-			<string>SDWebImage/UIButton+WebCache.h</string>
+			<string>TZImagePickerController/TZImagePickerController/TZAssetCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3B923812223D4691832E6755C199DBA6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TZAssetModel.h</string>
+			<key>path</key>
+			<string>TZImagePickerController/TZImagePickerController/TZAssetModel.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3DB5F6074949340145C96464D1641875</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5CA567EFC47E761D6809CA4DF0EE1450</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>407CA8A47454477126D2D608B78C075F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>609DD8EF242B56172BA66E6B780EFC65</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>428C19D5F223141240DBEE5C11E7DA83</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIImageView+HighlightedWebCache.m</string>
+			<key>path</key>
+			<string>SDWebImage/UIImageView+HighlightedWebCache.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -559,84 +868,31 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4459FA330932DE631A218529DD321B16</key>
+		<key>454ACC5D0138AE0E60B456F831BAF861</key>
 		<dict>
-			<key>fileRef</key>
-			<string>DD2F1D3A056E810F4C2F4FBA8CD564B8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>45D1CFE2B117BBB38C5D6E01A283DCBD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>95C45A3987079A5F63A05BC0F073A6FF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4618EC124804893173A3DAEB87A81CCE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A895A6ABCEB0B7C9FC92EF3501AF8670</string>
-				<string>3D504C3E050E2F302128ED1746AB5E14</string>
-				<string>A0EDA909D16F3C3A18FCA88CB63FC864</string>
-				<string>281832CEA781B74AAD1E9F5C17EA55CE</string>
-				<string>E73303D69EBFFE77F5A5C8DCCB63A14B</string>
-				<string>3C7C4F0BF6B9CCDF5D867BC740ABAA9D</string>
-				<string>A1F4CBADC7A0719F279C49D5353A7FB4</string>
-				<string>C6C77ADB459D3CC756C56B1DBA5862C2</string>
-				<string>D7E9F72D99A7B0370F6BAB398EF4D9E7</string>
-				<string>95C45A3987079A5F63A05BC0F073A6FF</string>
-				<string>C772476EBFD8D565B8FC11BBE12A1FDB</string>
-				<string>D91A3C0EC5F40A42732EEC836992D998</string>
-				<string>B6E3B199C0512801C022F178F3CBEFD8</string>
-				<string>EE97BB76C6686CEC78E9FB87AEB79B42</string>
-				<string>FAED32B6FAD9F845BB35E5BD0B8635F2</string>
-				<string>FA9A502072C1EAF4817803374FF8B862</string>
-				<string>A538A5D766C094AE8885E61FC3EBF244</string>
-				<string>4131855CCD508A2E37777F52F8D2B3E8</string>
-				<string>653312B68BB48DCFECB45C13E126EE04</string>
-				<string>71D3875B157631C2286B6D896FA0036A</string>
-				<string>96CF17DFE4D306688FEBA58FC3359BA1</string>
-				<string>BB384D6CC2B45B9F82989DAD639A0D59</string>
-				<string>9A30FBCCCF62B020390F927EF1841D1B</string>
-				<string>ABF58C64ACA86E7F4147D783A743F8A4</string>
-				<string>C1FE3C223DE63FD5810A6C9900D5E395</string>
-				<string>0F40967E83B6C513C97405AEE377C2BD</string>
-				<string>0B68B5AD5A086F9BAD37AD8D2B7E478B</string>
-				<string>D7178335F2723160FC0B0A705BEAF4FC</string>
-				<string>FF96D78CF91CC6B66F5277D611B187C2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Core</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4630A6644E76AADF263AE66897C3F8DF</key>
-		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>Foundation.framework</string>
+			<string>UIImage+MultiFormat.h</string>
 			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<string>SDWebImage/UIImage+MultiFormat.h</string>
 			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>463AB816BA6B9EC4206D326498948C53</key>
+		<key>4568860E6F680F3B24B9D5852A7DADD7</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>759D9CFE8A7A3884501833BA9021DA1F</string>
+			<string>370C417B00641BDE790A58946CA501A6</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/SXImagePicker/SXImagePicker-prefix.pch</string>
+				<string>Target Support Files/TZImagePickerController/TZImagePickerController-prefix.pch</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
 				<string>9.3</string>
 				<key>MTL_ENABLE_DEBUG_INFO</key>
@@ -661,44 +917,59 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>46B16116079291B757761CFAD71DFE1F</key>
+		<key>45745C78D3B6CAC1881BA4EBD6035156</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4630A6644E76AADF263AE66897C3F8DF</string>
+			<string>5C07C23A9B6F04ADC4F4DC68BF00D9D7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>4937C6C35A974A1D34737394E193E480</key>
+		<key>459586F3276EEFCB68454EE6C547A6B9</key>
 		<dict>
-			<key>buildConfigurationList</key>
-			<string>01F843E01D1848B0DE97D90C12C6F44E</string>
-			<key>buildPhases</key>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIView+Layout.h</string>
+			<key>path</key>
+			<string>TZImagePickerController/TZImagePickerController/UIView+Layout.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4615FAA1815A0DF759A583F4383FA136</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
 			<array>
-				<string>4DE1170AA8E5D516D8EDC8FCED76A596</string>
-				<string>92EF6EFE4CF268B6D708D0CCF683DFBE</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>30FDE6F313B88535C0E23F48E2C063CD</string>
-				<string>FD7BF7BFD2C3315487BE11C49516DA84</string>
+				<string>2977111DCAC2FCE74339E3581EBB8C9E</string>
+				<string>407CA8A47454477126D2D608B78C075F</string>
 			</array>
 			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>productName</key>
-			<string>Pods</string>
-			<key>productReference</key>
-			<string>54F58712D097BFBF223765D6764BAAA0</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
-		<key>495A2BB6141455649862771FAF03312A</key>
+		<key>4630A6644E76AADF263AE66897C3F8DF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>4A42E05997EF7184B3C10AF90AC1AEFC</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A1F4CBADC7A0719F279C49D5353A7FB4</string>
+			<string>3A9D3FCB210CD9AB18C990959137C20A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -709,57 +980,42 @@
 				</array>
 			</dict>
 		</dict>
-		<key>4CDE2694A1F17D3E6F8A2E71CEC5C3E4</key>
+		<key>4A8BB261EB310191DE7556920F0E6D47</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>98C98CDFB3F20F2925F6CD1F141BB14F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>XCBuildConfiguration</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>Release</string>
+			<string>TZAssetModel.m</string>
+			<key>path</key>
+			<string>TZImagePickerController/TZImagePickerController/TZAssetModel.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4D2E0B7ED46BA64403A87749055BE985</key>
+		<key>4C245F50682925A6F71D5A4E85B400F5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIView+Layout.m</string>
+			<key>path</key>
+			<string>TZImagePickerController/TZImagePickerController/UIView+Layout.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4C6BB869D94E6191F1DBE892F92DAECE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3D504C3E050E2F302128ED1746AB5E14</string>
+			<string>3575099F54584F36EB84037AEC776DE6</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>4DE1170AA8E5D516D8EDC8FCED76A596</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A86918B07B3E586D5FF8A90395C90B23</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
 		</dict>
 		<key>4E762F23EC34ED4A6FF3312D84E33A40</key>
 		<dict>
@@ -774,23 +1030,50 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>53D299BDAFBC5565CB6CFB5A60DD853E</key>
+		<key>514E388A7E1AC261061D8D5F3D541D29</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>4618EC124804893173A3DAEB87A81CCE</string>
-				<string>03360EA89E07742168BA23D6F4986DF4</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>SDWebImage</string>
+			<string>SDWebImageDecoder.m</string>
 			<key>path</key>
-			<string>SDWebImage</string>
+			<string>SDWebImage/SDWebImageDecoder.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>54F58712D097BFBF223765D6764BAAA0</key>
+		<key>51D987AE9519E3ACFEDA041A471E47E9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>21818AE6D88196F7B878FC0138002744</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>53BFDC06846E803D3AAB1872E0AB44A5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TZAssetCell.m</string>
+			<key>path</key>
+			<string>TZImagePickerController/TZImagePickerController/TZAssetCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>54F2BFD9F5FFA3A741BB6979899B1900</key>
 		<dict>
 			<key>explicitFileType</key>
 			<string>archive.ar</string>
@@ -805,18 +1088,39 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>58E0ACDC7C2C307D3F3116CFCB781C82</key>
+		<key>58B6E05BC023FDAEF7EE80AF313703B5</key>
 		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>fileRef</key>
+			<string>1DE8A2E39B0E6526B770ABA5BD91F7FF</string>
 			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>C13113DBD862DACB8FE886AAF492671A</string>
-			<key>remoteInfo</key>
-			<string>SXImagePicker</string>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>59413B4B04E3C5BE8E2F3A2A4A8EF480</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2BD11B3EBA406AD154BAD05F9488944F</string>
+				<string>99E5050119F796847D5592E0B8791E0F</string>
+				<string>0043E27F8CC7078693C2CEC45C22800F</string>
+				<string>AD32C85BC66E8B9DA08CBF4B9F2F41E1</string>
+				<string>D63A7AEC8607B17E34B91442DCEB7724</string>
+				<string>67E5B993F6754699DCB7417DB2AC854A</string>
+				<string>E257D64F24E37380A4D7DAFA17783627</string>
+				<string>70B3800D2E0FD183F90C09B97C265328</string>
+				<string>DA29E69FA88013C1DED69F731D1F9508</string>
+				<string>B4EBAD8AB805153F4A16F6259EA7CFE4</string>
+				<string>7741912FAD5216B772E85308D8C3CF1B</string>
+				<string>F0118C8F57AD02EC7F1D45BCD752ACCB</string>
+				<string>D8F0A9EB8AE7C5577E16EFB2903D4636</string>
+				<string>0DB448968A0FD1EB47DF1A5745D2687A</string>
+				<string>B73B7E376FC11FC1285B39FD506432F0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>5A0C6FE968931D888F00C9EC18DDF5BC</key>
 		<dict>
@@ -886,49 +1190,49 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>5AA7436235D2720C05F2C5F8DA902E08</key>
+		<key>5C07C23A9B6F04ADC4F4DC68BF00D9D7</key>
 		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
 			<key>includeInIndex</key>
-			<string>0</string>
+			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>libSXImagePicker.a</string>
+			<string>TZPhotoPreviewCell.m</string>
 			<key>path</key>
-			<string>libSXImagePicker.a</string>
+			<string>TZImagePickerController/TZImagePickerController/TZPhotoPreviewCell.m</string>
 			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>5B41BDEB201C95056A89838BF89802F7</key>
+		<key>5CA567EFC47E761D6809CA4DF0EE1450</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSBundle+TZImagePicker.h</string>
+			<key>path</key>
+			<string>TZImagePickerController/TZImagePickerController/NSBundle+TZImagePicker.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5F166796A87310C7AC655E1FB1DA9843</key>
+		<dict>
+			<key>buildConfigurations</key>
 			<array>
-				<string>4459FA330932DE631A218529DD321B16</string>
-				<string>D3DEE7905C8C2A9FD6806938438311E1</string>
-				<string>B59E6555BBDE190154DAE7B059747A36</string>
+				<string>2F1DB78F247CA5E5DC274682E161D90A</string>
+				<string>20F53C4AFA7EC59A2B10C3BA6CFFDEB1</string>
 			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
+			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
-		</dict>
-		<key>5E5D766B0E9A52FFA5E940F1760EF844</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0F40967E83B6C513C97405AEE377C2BD</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
+			<string>XCConfigurationList</string>
 		</dict>
 		<key>609DD8EF242B56172BA66E6B780EFC65</key>
 		<dict>
@@ -943,20 +1247,37 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>61D40B470D4027305CE38AEE7C91E282</key>
+		<key>60D82AE7BE99ACCE1DF201DC4DA592BB</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SDWebImageDownloader.h</string>
 			<key>path</key>
-			<string>SDWebImage-dummy.m</string>
+			<string>SDWebImage/SDWebImageDownloader.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>653312B68BB48DCFECB45C13E126EE04</key>
+		<key>60FE6DABD8FF9B51708EF00F757E0E33</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIImageView+WebCache.h</string>
+			<key>path</key>
+			<string>SDWebImage/UIImageView+WebCache.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>66A287C2DC0FFA19738DFC7C15B58FC3</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -965,16 +1286,31 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>UIButton+WebCache.m</string>
+			<string>TZPhotoPreviewController.m</string>
 			<key>path</key>
-			<string>SDWebImage/UIButton+WebCache.m</string>
+			<string>TZImagePickerController/TZImagePickerController/TZPhotoPreviewController.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>6681890E03A072BA528E3FFA139FDDEE</key>
+		<key>678801364ED91A5A3CDCF7989D35F8A1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TZImageManager.h</string>
+			<key>path</key>
+			<string>TZImagePickerController/TZImagePickerController/TZImageManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>67E5B993F6754699DCB7417DB2AC854A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>FAED32B6FAD9F845BB35E5BD0B8635F2</string>
+			<string>D8BB0FEA813BA0EAF9F28009E8FCE556</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -985,12 +1321,41 @@
 				</array>
 			</dict>
 		</dict>
-		<key>6829A1D4A4CF785B1E799AAB29D81D8C</key>
+		<key>685B3F25081821749FE0F7875589C7B5</key>
 		<dict>
-			<key>fileRef</key>
-			<string>281832CEA781B74AAD1E9F5C17EA55CE</string>
+			<key>children</key>
+			<array>
+				<string>5CA567EFC47E761D6809CA4DF0EE1450</string>
+				<string>0D332C786CF482C2830E2360A7FF052D</string>
+				<string>3A9D3FCB210CD9AB18C990959137C20A</string>
+				<string>53BFDC06846E803D3AAB1872E0AB44A5</string>
+				<string>3B923812223D4691832E6755C199DBA6</string>
+				<string>4A8BB261EB310191DE7556920F0E6D47</string>
+				<string>678801364ED91A5A3CDCF7989D35F8A1</string>
+				<string>3575099F54584F36EB84037AEC776DE6</string>
+				<string>1C16141D62DD3C8DB64E3926B897E86A</string>
+				<string>20D6E5D7EC24FC8DC458A91F0257A00D</string>
+				<string>DA3DE28DCFEF42D4301C50F2240D7D7C</string>
+				<string>1DE8A2E39B0E6526B770ABA5BD91F7FF</string>
+				<string>961578FA322C31FF1E5C0A560DA41BA6</string>
+				<string>5C07C23A9B6F04ADC4F4DC68BF00D9D7</string>
+				<string>6ED6B448523FCF4331DC7FFD812596E1</string>
+				<string>66A287C2DC0FFA19738DFC7C15B58FC3</string>
+				<string>D1D412BC95CEE2832F9DE3B22B3A184D</string>
+				<string>B30FD48801E6969783A6BD6822A906A0</string>
+				<string>459586F3276EEFCB68454EE6C547A6B9</string>
+				<string>4C245F50682925A6F71D5A4E85B400F5</string>
+				<string>E063883904137252FEB9C12EFE9AB863</string>
+				<string>8B667609704C5373CF7A59B6A4D128FC</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>TZImagePickerController</string>
+			<key>path</key>
+			<string>TZImagePickerController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>6911BECA35E7518D864239B7E898EEF3</key>
 		<dict>
@@ -1005,48 +1370,159 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>6AADEB96BA5C11B0C2D83914F55C41B1</key>
+		<key>6ACD35BC75C8599CF648A8B5F7E9AB42</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>SDWebImage.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6B1BF49C935FEAF0EEFF0C1F13A9BBC7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>00C9F805B5B46E22DF039E3168F37796</string>
-				<string>941BC71F5810DC50437619E79159F484</string>
-				<string>23039370F64FAD70CD6E1FB6C486E519</string>
-				<string>D9D3D743A741B7AC813076447EAC6BBE</string>
-				<string>FCE7887B13E464A02EFB71709FAD715D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>SXImagePicker</string>
+			<string>SDWebImagePrefetcher.h</string>
 			<key>path</key>
-			<string>SXImagePicker</string>
+			<string>SDWebImage/SDWebImagePrefetcher.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>700960CF8A958BBAEA1F0D49DC226FCF</key>
+		<key>6C9B5F035A78462E86326E8A6E247649</key>
+		<dict>
+			<key>fileRef</key>
+			<string>459586F3276EEFCB68454EE6C547A6B9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>6DA4FEE7ED7616B57CA8181A8EA50E8E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIView+WebCacheOperation.m</string>
+			<key>path</key>
+			<string>SDWebImage/UIView+WebCacheOperation.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6ED6B448523FCF4331DC7FFD812596E1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TZPhotoPreviewController.h</string>
+			<key>path</key>
+			<string>TZImagePickerController/TZImagePickerController/TZPhotoPreviewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7040448822283871D0ED052827FB6590</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIImage+GIF.m</string>
+			<key>path</key>
+			<string>SDWebImage/UIImage+GIF.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>70B3800D2E0FD183F90C09B97C265328</key>
+		<dict>
+			<key>fileRef</key>
+			<string>252B5D1961E3EC6F0297B9D7A5C3A8D5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>721CA0DC5139F04A9A4495905827BAA9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SDWebImage-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>72BEC665BA8808E46FA47A18BEC6CAE5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>428C19D5F223141240DBEE5C11E7DA83</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>73C8EBDC8C3B5872429A923EA7EBA97B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3B923812223D4691832E6755C199DBA6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>764B22E7E608450BAB32BCD1707599B7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2034C09FC3A3059503FBD097530F4774</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7741912FAD5216B772E85308D8C3CF1B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>26ECD9B1A54E709F3EF371ADB326265E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>776D062833526EA3C43730E43441EFF3</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>759D9CFE8A7A3884501833BA9021DA1F</string>
+			<string>370C417B00641BDE790A58946CA501A6</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/SXImagePicker/SXImagePicker-prefix.pch</string>
+				<string>Target Support Files/TZImagePickerController/TZImagePickerController-prefix.pch</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
 				<string>9.3</string>
 				<key>MTL_ENABLE_DEBUG_INFO</key>
@@ -1071,7 +1547,84 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>71D3875B157631C2286B6D896FA0036A</key>
+		<key>7A5B53E4AA91BCB95B1D16771774344C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1D412BC95CEE2832F9DE3B22B3A184D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>7DB346D0F39D3F0E887471402A8071AB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
+				<string>433CD3331B6C3787F473C941B61FC68F</string>
+				<string>D1F1BCC46E152C4E7D29EACC4EA0FF3E</string>
+				<string>247327269920BF7F155BE1774FA0077F</string>
+				<string>037C0CA694176A3C0915F62C9D20B3E6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7FD21EAD2B53EB6DA192E383602D719B</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>DDF990ADE13E3C08BED7F5B4ADCBB818</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/SDWebImage/SDWebImage-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>80FAE6A844988D0A33141320F0DC8081</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C356E2A46281A42F2185D49FF543CC1A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>848BEE33CD60FA827082C64FA10B003F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>66A287C2DC0FFA19738DFC7C15B58FC3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>892B0DE4E174094E9AF27EC9BB48350B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1080,16 +1633,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>UIImage+GIF.h</string>
+			<string>UIImageView+HighlightedWebCache.h</string>
 			<key>path</key>
-			<string>SDWebImage/UIImage+GIF.h</string>
+			<string>SDWebImage/UIImageView+HighlightedWebCache.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>74F078E131F8E90F733A134206A907CC</key>
+		<key>89BE212880D246D3FCDBA494CB039AC1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>BB384D6CC2B45B9F82989DAD639A0D59</string>
+			<string>678801364ED91A5A3CDCF7989D35F8A1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1100,96 +1653,45 @@
 				</array>
 			</dict>
 		</dict>
-		<key>759D9CFE8A7A3884501833BA9021DA1F</key>
+		<key>89D9C47842681733DD65B155FDF034B8</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>514E388A7E1AC261061D8D5F3D541D29</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>SXImagePicker.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
+		<key>8B667609704C5373CF7A59B6A4D128FC</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>433CD3331B6C3787F473C941B61FC68F</string>
-				<string>FC0417D6416BB667158EE51F771EC840</string>
-				<string>40BA2A218E576E068025B364DE6F816F</string>
-				<string>037C0CA694176A3C0915F62C9D20B3E6</string>
+				<string>370C417B00641BDE790A58946CA501A6</string>
+				<string>2034C09FC3A3059503FBD097530F4774</string>
+				<string>2597B1FB721A7B65D5932F1A58DB1A92</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/TZImagePickerController</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>87384FBF57887A0808FFA29483E3564A</key>
+		<key>92161F64DEF5181B8F4D2AD6DF4F9243</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
+			<key>buildConfigurations</key>
 			<array>
-				<string>4D2E0B7ED46BA64403A87749055BE985</string>
-				<string>6829A1D4A4CF785B1E799AAB29D81D8C</string>
-				<string>BA7F61F0FF0AE801B742EFE278161F23</string>
-				<string>A0CCA1652634BB1CAC78ED5BADDC4BCC</string>
-				<string>09106E6E2103A871D62C3AC949D382F0</string>
-				<string>45D1CFE2B117BBB38C5D6E01A283DCBD</string>
-				<string>104F818425E76DA08081B217000F986A</string>
-				<string>0C368522C6A78AB7F4F31481573C5F99</string>
-				<string>BE2530E72D89D07617C234CDA9287CF8</string>
-				<string>CF3A5256E5DC0BB1F9EB2AB855BD294E</string>
-				<string>F948D7DE184B1B73AA05A459EC3014D3</string>
-				<string>1ABB6D677CA75DB3FB2872EF13DE5764</string>
-				<string>12E3B658C4241DCD64459D824907C9C2</string>
-				<string>D370A65D8356CB666003F91863656A7B</string>
-				<string>8B1AAC5DE7C1BB1B3B8E511E78F0D46E</string>
+				<string>4568860E6F680F3B24B9D5852A7DADD7</string>
+				<string>776D062833526EA3C43730E43441EFF3</string>
 			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
+			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
-		</dict>
-		<key>8B1AAC5DE7C1BB1B3B8E511E78F0D46E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FF96D78CF91CC6B66F5277D611B187C2</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>XCConfigurationList</string>
 		</dict>
-		<key>9013FBD7A1D9449C6CAD0F859C5D8222</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A895A6ABCEB0B7C9FC92EF3501AF8670</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>92EF6EFE4CF268B6D708D0CCF683DFBE</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>46B16116079291B757761CFAD71DFE1F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>941BC71F5810DC50437619E79159F484</key>
+		<key>923A44FC12CEE7DD4A44795802857972</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1198,28 +1700,28 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>SXImagePicker.m</string>
+			<string>UIButton+WebCache.m</string>
 			<key>path</key>
-			<string>SXImagePicker/SXImagePicker.m</string>
+			<string>SDWebImage/UIButton+WebCache.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>95C45A3987079A5F63A05BC0F073A6FF</key>
+		<key>961578FA322C31FF1E5C0A560DA41BA6</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>SDWebImageDownloader.m</string>
+			<string>TZPhotoPreviewCell.h</string>
 			<key>path</key>
-			<string>SDWebImage/SDWebImageDownloader.m</string>
+			<string>TZImagePickerController/TZImagePickerController/TZPhotoPreviewCell.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>96CF17DFE4D306688FEBA58FC3359BA1</key>
+		<key>96452BEE8E46182FEAF87262BDE9D650</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1228,9 +1730,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>UIImage+GIF.m</string>
+			<string>SDWebImageDownloaderOperation.m</string>
 			<key>path</key>
-			<string>SDWebImage/UIImage+GIF.m</string>
+			<string>SDWebImage/SDWebImageDownloaderOperation.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1247,100 +1749,34 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>992D38A0430A8787C52790DAEADCF57E</key>
+		<key>99E5050119F796847D5592E0B8791E0F</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>AC472672A4DC0DE3CA267B7EAC8B773F</string>
-				<string>EF1EE437B45378CEF21C5763ABFD8052</string>
-			</array>
+			<key>fileRef</key>
+			<string>02B82038EE0007911C67FA1E31794898</string>
 			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
-		<key>99D6B48F49B893BFE548E4A565537042</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libSDWebImage.a</string>
-			<key>path</key>
-			<string>libSDWebImage.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>9A30FBCCCF62B020390F927EF1841D1B</key>
+		<key>9C4D4B6D4670261D40F08D8A6272A387</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIImage+MultiFormat.m</string>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>SDWebImage/UIImage+MultiFormat.m</string>
+			<string>SDWebImage-prefix.pch</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9B6C0721E41F009459CFA0E28A554EFD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FA9A502072C1EAF4817803374FF8B862</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>9F002B28D755C099843BF5A8852C4E3B</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>26FACB5CADAB36DDD22C3273CE1D4854</string>
-				<string>FCFB811E288B84DC3E19470258E383A9</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>A01E744AAF6B8E4DE5B55C427265125F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4131855CCD508A2E37777F52F8D2B3E8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>A0CCA1652634BB1CAC78ED5BADDC4BCC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3C7C4F0BF6B9CCDF5D867BC740ABAA9D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A0EDA909D16F3C3A18FCA88CB63FC864</key>
+		<key>9CF14D7A84E10F24DA32D9A9B8EB5417</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1349,9 +1785,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>SDImageCache.h</string>
+			<string>SDWebImageCompat.h</string>
 			<key>path</key>
-			<string>SDWebImage/SDImageCache.h</string>
+			<string>SDWebImage/SDWebImageCompat.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1368,25 +1804,17 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A1F4CBADC7A0719F279C49D5353A7FB4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>SDWebImageDecoder.h</string>
-			<key>path</key>
-			<string>SDWebImage/SDWebImageDecoder.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A388DAB42C40171289582EB00F3F46B3</key>
+		<key>A4278902721942537A11AB89B67FE623</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C772476EBFD8D565B8FC11BBE12A1FDB</string>
+			<string>721CA0DC5139F04A9A4495905827BAA9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AD32C85BC66E8B9DA08CBF4B9F2F41E1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>30DB8B6298A2207B849DCD9ECE1302CE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1397,7 +1825,14 @@
 				</array>
 			</dict>
 		</dict>
-		<key>A538A5D766C094AE8885E61FC3EBF244</key>
+		<key>AE2C6AC8B1141E235A0218FB73EAB0C0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>923A44FC12CEE7DD4A44795802857972</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B30FD48801E6969783A6BD6822A906A0</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1406,97 +1841,11 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>SDWebImagePrefetcher.m</string>
+			<string>TZVideoPlayerController.m</string>
 			<key>path</key>
-			<string>SDWebImage/SDWebImagePrefetcher.m</string>
+			<string>TZImagePickerController/TZImagePickerController/TZVideoPlayerController.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A7105B8C031EE57B3FA11FD74E8EF07B</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>463AB816BA6B9EC4206D326498948C53</string>
-				<string>700960CF8A958BBAEA1F0D49DC226FCF</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>A86918B07B3E586D5FF8A90395C90B23</key>
-		<dict>
-			<key>fileRef</key>
-			<string>272643F56613CA0D336AE3DBF19DC404</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A895A6ABCEB0B7C9FC92EF3501AF8670</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NSData+ImageContentType.h</string>
-			<key>path</key>
-			<string>SDWebImage/NSData+ImageContentType.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AA4DFA58216EA37C0A35866F4D293201</key>
-		<dict>
-			<key>fileRef</key>
-			<string>71D3875B157631C2286B6D896FA0036A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>ABF58C64ACA86E7F4147D783A743F8A4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIImageView+HighlightedWebCache.h</string>
-			<key>path</key>
-			<string>SDWebImage/UIImageView+HighlightedWebCache.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AC472672A4DC0DE3CA267B7EAC8B773F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4630A6644E76AADF263AE66897C3F8DF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B22051CB2F73C0AAE9BAD682D8850B7D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B6E3B199C0512801C022F178F3CBEFD8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>B3D1D13E0C6553800746CB8FD61CF946</key>
 		<dict>
@@ -1519,27 +1868,85 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B59E6555BBDE190154DAE7B059747A36</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D9D3D743A741B7AC813076447EAC6BBE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B6E3B199C0512801C022F178F3CBEFD8</key>
+		<key>B4A2157B44763C479A4A8860B629C2E4</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>SDWebImageManager.h</string>
+			<string>SDWebImagePrefetcher.m</string>
 			<key>path</key>
-			<string>SDWebImage/SDWebImageManager.h</string>
+			<string>SDWebImage/SDWebImagePrefetcher.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B4BD8AF81AFA097C4A68E32BD52CF4F0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3DB5F6074949340145C96464D1641875</string>
+				<string>4A42E05997EF7184B3C10AF90AC1AEFC</string>
+				<string>73C8EBDC8C3B5872429A923EA7EBA97B</string>
+				<string>89BE212880D246D3FCDBA494CB039AC1</string>
+				<string>39BEEB1A642483E7DE11B5BFFCE17AEB</string>
+				<string>FBFB0665CAA5C3C7C7738A74B74493E7</string>
+				<string>3663638CED4C1404B38DD82CA76B6826</string>
+				<string>BE5DD6EB60A642DFB5F8BAB346FF06B8</string>
+				<string>7A5B53E4AA91BCB95B1D16771774344C</string>
+				<string>6C9B5F035A78462E86326E8A6E247649</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>B4EBAD8AB805153F4A16F6259EA7CFE4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0B5774F9DA64014632CBA13B0B2DCF16</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>B73B7E376FC11FC1285B39FD506432F0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C4E60B013DED8202203EAA49054ADDD2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>BA4B63650CF4A6D46757655B7FD65F9D</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libSDWebImage.a</string>
+			<key>path</key>
+			<string>libSDWebImage.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
 		<dict>
@@ -1558,105 +1965,7 @@
 			<key>xcLanguageSpecificationIdentifier</key>
 			<string>xcode.lang.ruby</string>
 		</dict>
-		<key>BA7F61F0FF0AE801B742EFE278161F23</key>
-		<dict>
-			<key>fileRef</key>
-			<string>61D40B470D4027305CE38AEE7C91E282</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BB384D6CC2B45B9F82989DAD639A0D59</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIImage+MultiFormat.h</string>
-			<key>path</key>
-			<string>SDWebImage/UIImage+MultiFormat.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BBC2E44C543A874FAB972DFD6A51D999</key>
-		<dict>
-			<key>fileRef</key>
-			<string>ABF58C64ACA86E7F4147D783A743F8A4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>BE0365591C6D7215AC67F6D016161FE2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D7178335F2723160FC0B0A705BEAF4FC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>BE2530E72D89D07617C234CDA9287CF8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A538A5D766C094AE8885E61FC3EBF244</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BF6401133FF99D8A73168E3D8299C6AA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>23039370F64FAD70CD6E1FB6C486E519</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>C13113DBD862DACB8FE886AAF492671A</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>A7105B8C031EE57B3FA11FD74E8EF07B</string>
-			<key>buildPhases</key>
-			<array>
-				<string>5B41BDEB201C95056A89838BF89802F7</string>
-				<string>16390572B81D2F595D16DB1A657644DE</string>
-				<string>2B3CA6BA4130CB158A21CCA130A70A6B</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>1EDACE7555A136998312B00517B20B49</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>SXImagePicker</string>
-			<key>productName</key>
-			<string>SXImagePicker</string>
-			<key>productReference</key>
-			<string>5AA7436235D2720C05F2C5F8DA902E08</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>C1FE3C223DE63FD5810A6C9900D5E395</key>
+		<key>BE4E0461104D7BDC92D5411F5F96668B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1665,13 +1974,34 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>UIImageView+HighlightedWebCache.m</string>
+			<string>SDImageCache.m</string>
 			<key>path</key>
-			<string>SDWebImage/UIImageView+HighlightedWebCache.m</string>
+			<string>SDWebImage/SDImageCache.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C6C77ADB459D3CC756C56B1DBA5862C2</key>
+		<key>BE5249C5FA3A3A1B47D52F3E8105FCE6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>96452BEE8E46182FEAF87262BDE9D650</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE5DD6EB60A642DFB5F8BAB346FF06B8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6ED6B448523FCF4331DC7FFD812596E1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>C356E2A46281A42F2185D49FF543CC1A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1680,13 +2010,20 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>SDWebImageDecoder.m</string>
+			<string>NSData+ImageContentType.m</string>
 			<key>path</key>
-			<string>SDWebImage/SDWebImageDecoder.m</string>
+			<string>SDWebImage/NSData+ImageContentType.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C772476EBFD8D565B8FC11BBE12A1FDB</key>
+		<key>C3C0463360B27E0F8B1920AEDBA50459</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DFF54F3F3063221834A412D9E6AD763B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C4E60B013DED8202203EAA49054ADDD2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1695,45 +2032,112 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>SDWebImageDownloaderOperation.h</string>
+			<string>UIView+WebCacheOperation.h</string>
 			<key>path</key>
-			<string>SDWebImage/SDWebImageDownloaderOperation.h</string>
+			<string>SDWebImage/UIView+WebCacheOperation.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CF3A5256E5DC0BB1F9EB2AB855BD294E</key>
+		<key>C57213C4FA7682968490CF74BF3AAD47</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C677DF37D5C907B767D7E45ADA15B8FB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C677DF37D5C907B767D7E45ADA15B8FB</key>
 		<dict>
 			<key>fileRef</key>
-			<string>653312B68BB48DCFECB45C13E126EE04</string>
+			<string>4630A6644E76AADF263AE66897C3F8DF</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>D1582670678BF7142ECDB666B8A6817E</key>
+		<key>CD9C1514D3D58E3DF35444E29BA905D0</key>
 		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
 			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>TZImagePickerController</string>
+			<key>target</key>
+			<string>11161BA7330E2CC106F904F3684417C1</string>
+			<key>targetProxy</key>
+			<string>155E1B7985D2D43F69446B5FEB638C19</string>
+		</dict>
+		<key>CEC77C202A2E8EC892B27C4605BF0AF1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EAD7BAFCBFD9140B7435D8805688AFDF</string>
+				<string>C356E2A46281A42F2185D49FF543CC1A</string>
+				<string>02B82038EE0007911C67FA1E31794898</string>
+				<string>BE4E0461104D7BDC92D5411F5F96668B</string>
+				<string>9CF14D7A84E10F24DA32D9A9B8EB5417</string>
+				<string>DFF54F3F3063221834A412D9E6AD763B</string>
+				<string>30DB8B6298A2207B849DCD9ECE1302CE</string>
+				<string>514E388A7E1AC261061D8D5F3D541D29</string>
+				<string>60D82AE7BE99ACCE1DF201DC4DA592BB</string>
+				<string>DA92548ADBF858DF07C217FE88A62594</string>
+				<string>D8BB0FEA813BA0EAF9F28009E8FCE556</string>
+				<string>96452BEE8E46182FEAF87262BDE9D650</string>
+				<string>2F2C887CE169090510F6D2D7008CC795</string>
+				<string>F557FD8311BD92F2EBB32915A8B1297D</string>
+				<string>252B5D1961E3EC6F0297B9D7A5C3A8D5</string>
+				<string>6ACD35BC75C8599CF648A8B5F7E9AB42</string>
+				<string>B4A2157B44763C479A4A8860B629C2E4</string>
+				<string>0B5774F9DA64014632CBA13B0B2DCF16</string>
+				<string>923A44FC12CEE7DD4A44795802857972</string>
+				<string>26ECD9B1A54E709F3EF371ADB326265E</string>
+				<string>7040448822283871D0ED052827FB6590</string>
+				<string>454ACC5D0138AE0E60B456F831BAF861</string>
+				<string>24F225F254B4A849F6694F7EC5BF757E</string>
+				<string>892B0DE4E174094E9AF27EC9BB48350B</string>
+				<string>428C19D5F223141240DBEE5C11E7DA83</string>
+				<string>60FE6DABD8FF9B51708EF00F757E0E33</string>
+				<string>F8981E43DFBFA9A2C31C74FA7475B0AA</string>
+				<string>C4E60B013DED8202203EAA49054ADDD2</string>
+				<string>6DA4FEE7ED7616B57CA8181A8EA50E8E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Core</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1D412BC95CEE2832F9DE3B22B3A184D</key>
+		<dict>
+			<key>includeInIndex</key>
 			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>052D46D6790B4DFCE0521CCE917BEC27</string>
-			<key>remoteInfo</key>
-			<string>SDWebImage</string>
-		</dict>
-		<key>D370A65D8356CB666003F91863656A7B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0B68B5AD5A086F9BAD37AD8D2B7E478B</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TZVideoPlayerController.h</string>
+			<key>path</key>
+			<string>TZImagePickerController/TZImagePickerController/TZVideoPlayerController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D3DEE7905C8C2A9FD6806938438311E1</key>
+		<key>D1F1BCC46E152C4E7D29EACC4EA0FF3E</key>
 		<dict>
-			<key>fileRef</key>
-			<string>941BC71F5810DC50437619E79159F484</string>
+			<key>children</key>
+			<array>
+				<string>EB3A19B15F7021B7D90E0F689FAF9E38</string>
+				<string>685B3F25081821749FE0F7875589C7B5</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D41D8CD98F00B204E9800998ECF8427E</key>
 		<dict>
@@ -1761,7 +2165,7 @@
 			<key>mainGroup</key>
 			<string>7DB346D0F39D3F0E887471402A8071AB</string>
 			<key>productRefGroup</key>
-			<string>40BA2A218E576E068025B364DE6F816F</string>
+			<string>247327269920BF7F155BE1774FA0077F</string>
 			<key>projectDirPath</key>
 			<string></string>
 			<key>projectReferences</key>
@@ -1770,15 +2174,15 @@
 			<string></string>
 			<key>targets</key>
 			<array>
-				<string>4937C6C35A974A1D34737394E193E480</string>
-				<string>052D46D6790B4DFCE0521CCE917BEC27</string>
-				<string>C13113DBD862DACB8FE886AAF492671A</string>
+				<string>1F214E40814F44D9FB686EA6DF1C909E</string>
+				<string>F9F80D0177E2AE5BA8024D973864718C</string>
+				<string>11161BA7330E2CC106F904F3684417C1</string>
 			</array>
 		</dict>
-		<key>D4609B6B74984012256CAD499B1212F1</key>
+		<key>D63A7AEC8607B17E34B91442DCEB7724</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D7E9F72D99A7B0370F6BAB398EF4D9E7</string>
+			<string>60D82AE7BE99ACCE1DF201DC4DA592BB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1789,7 +2193,21 @@
 				</array>
 			</dict>
 		</dict>
-		<key>D7178335F2723160FC0B0A705BEAF4FC</key>
+		<key>D7C8033D4F4343541A033F74D0BEEEE2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7040448822283871D0ED052827FB6590</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D87BAE1EA4FE0064DC0B3F79F490DBCE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F8981E43DFBFA9A2C31C74FA7475B0AA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D8BB0FEA813BA0EAF9F28009E8FCE556</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1798,13 +2216,41 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>UIView+WebCacheOperation.h</string>
+			<string>SDWebImageDownloaderOperation.h</string>
 			<key>path</key>
-			<string>SDWebImage/UIView+WebCacheOperation.h</string>
+			<string>SDWebImage/SDWebImageDownloaderOperation.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D7E9F72D99A7B0370F6BAB398EF4D9E7</key>
+		<key>D8F0A9EB8AE7C5577E16EFB2903D4636</key>
+		<dict>
+			<key>fileRef</key>
+			<string>892B0DE4E174094E9AF27EC9BB48350B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>DA29E69FA88013C1DED69F731D1F9508</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6ACD35BC75C8599CF648A8B5F7E9AB42</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>DA3DE28DCFEF42D4301C50F2240D7D7C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1813,13 +2259,13 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>SDWebImageDownloader.h</string>
+			<string>TZPhotoPickerController.h</string>
 			<key>path</key>
-			<string>SDWebImage/SDWebImageDownloader.h</string>
+			<string>TZImagePickerController/TZImagePickerController/TZPhotoPickerController.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D91A3C0EC5F40A42732EEC836992D998</key>
+		<key>DA92548ADBF858DF07C217FE88A62594</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1828,13 +2274,37 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>SDWebImageDownloaderOperation.m</string>
+			<string>SDWebImageDownloader.m</string>
 			<key>path</key>
-			<string>SDWebImage/SDWebImageDownloaderOperation.m</string>
+			<string>SDWebImage/SDWebImageDownloader.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D9D3D743A741B7AC813076447EAC6BBE</key>
+		<key>DDF990ADE13E3C08BED7F5B4ADCBB818</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>SDWebImage.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DEC1E8587C72C9D57BAAC8FD5113F536</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>SDWebImage</string>
+			<key>target</key>
+			<string>F9F80D0177E2AE5BA8024D973864718C</string>
+			<key>targetProxy</key>
+			<string>206F5F25D8B8FB40979E8926560BFCE3</string>
+		</dict>
+		<key>DFF54F3F3063221834A412D9E6AD763B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1843,53 +2313,40 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>ViewImageController.m</string>
+			<string>SDWebImageCompat.m</string>
 			<key>path</key>
-			<string>SXImagePicker/ViewImageController.m</string>
+			<string>SDWebImage/SDWebImageCompat.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>DD2F1D3A056E810F4C2F4FBA8CD564B8</key>
+		<key>E063883904137252FEB9C12EFE9AB863</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SXImagePicker-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E5BB5DC467804BB092AEE4593ED51A56</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
+			<key>children</key>
 			<array>
-				<string>9013FBD7A1D9449C6CAD0F859C5D8222</string>
-				<string>2DCD8F0DC9779ABA93F851023C5A41D5</string>
-				<string>1CCEBF35DE477F72A087FA06488BD652</string>
-				<string>495A2BB6141455649862771FAF03312A</string>
-				<string>D4609B6B74984012256CAD499B1212F1</string>
-				<string>A388DAB42C40171289582EB00F3F46B3</string>
-				<string>B22051CB2F73C0AAE9BAD682D8850B7D</string>
-				<string>6681890E03A072BA528E3FFA139FDDEE</string>
-				<string>9B6C0721E41F009459CFA0E28A554EFD</string>
-				<string>A01E744AAF6B8E4DE5B55C427265125F</string>
-				<string>AA4DFA58216EA37C0A35866F4D293201</string>
-				<string>74F078E131F8E90F733A134206A907CC</string>
-				<string>BBC2E44C543A874FAB972DFD6A51D999</string>
-				<string>5E5D766B0E9A52FFA5E940F1760EF844</string>
-				<string>BE0365591C6D7215AC67F6D016161FE2</string>
+				<string>FEC3208F957CEF951C9A011D5CA4B012</string>
 			</array>
 			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E73303D69EBFFE77F5A5C8DCCB63A14B</key>
+		<key>E257D64F24E37380A4D7DAFA17783627</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2F2C887CE169090510F6D2D7008CC795</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>EAD7BAFCBFD9140B7435D8805688AFDF</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1898,13 +2355,50 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>SDWebImageCompat.h</string>
+			<string>NSData+ImageContentType.h</string>
 			<key>path</key>
-			<string>SDWebImage/SDWebImageCompat.h</string>
+			<string>SDWebImage/NSData+ImageContentType.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>EE97BB76C6686CEC78E9FB87AEB79B42</key>
+		<key>EB3A19B15F7021B7D90E0F689FAF9E38</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CEC77C202A2E8EC892B27C4605BF0AF1</string>
+				<string>30326D31889B5C899FFAC4E99FBE9074</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>SDWebImage</string>
+			<key>path</key>
+			<string>SDWebImage</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F0118C8F57AD02EC7F1D45BCD752ACCB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>454ACC5D0138AE0E60B456F831BAF861</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>F5399FDC90C572AB0BC3F53CE77593A2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE4E0461104D7BDC92D5411F5F96668B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F557FD8311BD92F2EBB32915A8B1297D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1919,117 +2413,50 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>EF1EE437B45378CEF21C5763ABFD8052</key>
-		<dict>
-			<key>fileRef</key>
-			<string>609DD8EF242B56172BA66E6B780EFC65</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F948D7DE184B1B73AA05A459EC3014D3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>96CF17DFE4D306688FEBA58FC3359BA1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F990A83428E4E9F12072831BF8F2748B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>4E762F23EC34ED4A6FF3312D84E33A40</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>FA9A502072C1EAF4817803374FF8B862</key>
+		<key>F8981E43DFBFA9A2C31C74FA7475B0AA</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>SDWebImagePrefetcher.h</string>
+			<string>UIImageView+WebCache.m</string>
 			<key>path</key>
-			<string>SDWebImage/SDWebImagePrefetcher.h</string>
+			<string>SDWebImage/UIImageView+WebCache.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>FAED32B6FAD9F845BB35E5BD0B8635F2</key>
+		<key>F9F80D0177E2AE5BA8024D973864718C</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>SDWebImageOperation.h</string>
-			<key>path</key>
-			<string>SDWebImage/SDWebImageOperation.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FC0417D6416BB667158EE51F771EC840</key>
-		<dict>
-			<key>children</key>
+			<key>buildConfigurationList</key>
+			<string>0F49BDB2F6A51DA41370CA9367D2D1B2</string>
+			<key>buildPhases</key>
 			<array>
-				<string>53D299BDAFBC5565CB6CFB5A60DD853E</string>
-				<string>6B1BF49C935FEAF0EEFF0C1F13A9BBC7</string>
+				<string>1B504A0E600A9BA3CFCC81960E617B2C</string>
+				<string>4615FAA1815A0DF759A583F4383FA136</string>
+				<string>59413B4B04E3C5BE8E2F3A2A4A8EF480</string>
 			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>SDWebImage</string>
+			<key>productName</key>
+			<string>SDWebImage</string>
+			<key>productReference</key>
+			<string>BA4B63650CF4A6D46757655B7FD65F9D</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
 		</dict>
-		<key>FCE7887B13E464A02EFB71709FAD715D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>759D9CFE8A7A3884501833BA9021DA1F</string>
-				<string>DD2F1D3A056E810F4C2F4FBA8CD564B8</string>
-				<string>058F9108EC9B236E10C2C04FD96EA55C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/SXImagePicker</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FCFB811E288B84DC3E19470258E383A9</key>
+		<key>FAF4D862496DE07FC31ADB48A8DE77CB</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>6AADEB96BA5C11B0C2D83914F55C41B1</string>
+			<string>DDF990ADE13E3C08BED7F5B4ADCBB818</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -2060,16 +2487,47 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>FD7BF7BFD2C3315487BE11C49516DA84</key>
+		<key>FBFB0665CAA5C3C7C7738A74B74493E7</key>
 		<dict>
+			<key>fileRef</key>
+			<string>DA3DE28DCFEF42D4301C50F2240D7D7C</string>
 			<key>isa</key>
-			<string>PBXTargetDependency</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>FE3C96CF300248BB28D5920E9FDBF2B9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>25F0584223B81AB960F8B6B14BD45707</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>FEC3208F957CEF951C9A011D5CA4B012</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.plug-in</string>
 			<key>name</key>
-			<string>SXImagePicker</string>
-			<key>target</key>
-			<string>C13113DBD862DACB8FE886AAF492671A</string>
-			<key>targetProxy</key>
-			<string>58E0ACDC7C2C307D3F3116CFCB781C82</string>
+			<string>TZImagePickerController.bundle</string>
+			<key>path</key>
+			<string>TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>FF880E94BC5F1B73ECBD6429796DC5C3</key>
 		<dict>
@@ -2082,21 +2540,6 @@
 			<string>PBXGroup</string>
 			<key>name</key>
 			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FF96D78CF91CC6B66F5277D611B187C2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIView+WebCacheOperation.m</string>
-			<key>path</key>
-			<string>SDWebImage/UIView+WebCacheOperation.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>

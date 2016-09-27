@@ -13,32 +13,29 @@
 #import "SXRichViewEdit.h"
 #import "SXRich.h"
 #import "SDWebImageDownloader.h"
+#import "TZImagePickerController.h"
 
-#define IMAGE_MAX_SIZE 365
-#define DefaultFont ((Scaled(14)))
+#define ImageWidthSize self.frame.size.width-10
+#define DefaultFont (16)
 #define MaxLength (1000) //最大选中删除字符数
-#define RICHTEXT_IMAGE (@"[UIImageView]")
+#define RichTextImage (@"[UIImageView]")
 #define ImageButtonFrame CGRectMake(self.frame.size.width - 120, self.frame.size.height - 40, 50, 40)
 #define DoneButtonFrame CGRectMake(self.frame.size.width - 60, self.frame.size.height - 40, 50, 40)
 
-@interface SXRichViewEdit () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate>
+@interface SXRichViewEdit () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate ,TZImagePickerControllerDelegate>
 
 @property (nonatomic, weak  ) UIViewController          *selfController;
 @property (nonatomic, strong) UITextView                *textView;
 @property (nonatomic, assign) NSRange                   newRange;//记录最新内容的range
-@property (nonatomic, strong) NSString                  *newstr;//记录最新内容的字符串
-@property (nonatomic, assign) NSUInteger                location;//纪录变化的起始位置
-@property (nonatomic, strong) NSMutableArray            *imageArr;//记录添加的图片
+@property (nonatomic, assign) NSRange                   addImageRange;//记录最新内容的range
 
 @property (nonatomic, strong) NSMutableAttributedString *locationStr;//纪录变化时的内容，即是
-@property (nonatomic, assign) CGFloat                   lineSapce;//行间距
-@property (nonatomic, assign) BOOL                      isDelete;//是否是回删
 @property (nonatomic, assign) CGRect                    selfFrame;//默认位置
 @property (nonatomic, assign) CGRect                    selfNewFrame;//弹起键盘的位置
 
 @property (nonatomic, assign) NSInteger                 imageIndex;//加载的图片index
 @property (nonatomic, assign) NSInteger                 iamgeDownloadAllCount;//下载图片所有个数
-@property (nonatomic, strong) NSMutableArray            *imageDownloadArr;//加载的图片index
+@property (nonatomic, strong) NSMutableDictionary       *imageDownloadDic;//加载的图片index
 
 @property (nonatomic, strong) UIButton                  *imgButton;
 @property (nonatomic, strong) UIButton                  *doneButton;
@@ -64,7 +61,6 @@
 - (void)initData {
     self.backgroundColor = [UIColor grayColor];
     _iamgeDownloadAllCount = -1;
-    _imageArr = [[NSMutableArray alloc] initWithCapacity:0];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onKeyboardNotification:) name:UIKeyboardWillHideNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onKeyboardNotification:) name:UIKeyboardWillShowNotification object:nil];
 }
@@ -118,23 +114,27 @@
 
 - (void)setLoadImages:(NSArray *)urlArr {
     _iamgeDownloadAllCount = urlArr.count;
-    _imageDownloadArr = [[NSMutableArray alloc] initWithCapacity:0];
+    _imageDownloadDic = [[NSMutableDictionary alloc] initWithCapacity:0];
     for (NSString * urlImage in urlArr) {
         [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:urlImage] options:0 progress:nil completed:^(UIImage *image, NSData *data, NSError *error, BOOL finished) {
             if (image) {
                 UIImage *image1 = [UIImage imageWithData:data];
-                [_imageDownloadArr addObject:image1];
-                [self refreshTextImageView];
+                [_imageDownloadDic setValue:image1 forKey:urlImage];
+                [self refreshTextImageView:urlArr];
             }
         }];
     }
 }
 
-- (void)refreshTextImageView {
-    if (_imageDownloadArr.count == _iamgeDownloadAllCount) {
+- (void)refreshTextImageView:(NSArray *)urlArr {
+    if (_imageDownloadDic.count == urlArr.count) {
+        NSMutableArray *arrImage = [[NSMutableArray alloc] initWithCapacity:0];
+        for (NSString *imageUrl in urlArr) {
+            [arrImage addObject:_imageDownloadDic[imageUrl]];
+        }
         dispatch_sync(dispatch_get_main_queue(), ^{
             /* Do UI work here */
-            [self setRichTextViewImageArr:_imageDownloadArr];
+            [self setRichTextViewImageArr:arrImage];
         });
     }
 }
@@ -175,8 +175,6 @@
 }
 
 - (void)setRichTextViewImageArr:(NSArray<UIImage *> *)imageArr {
-    [_imageArr removeAllObjects];
-    [_imageArr addObjectsFromArray:imageArr];
     _imageIndex = 0;
     NSMutableAttributedString *contentStr = [[NSMutableAttributedString alloc] initWithAttributedString:_textView.attributedText];
     [contentStr enumerateAttribute:NSAttachmentAttributeName inRange:NSMakeRange(0, contentStr.length) options:0 usingBlock:^(id value, NSRange range, BOOL *stop) {
@@ -191,8 +189,17 @@
 #pragma mark ----------------编辑完成button-----------------
 
 - (void)doneButtonAction {
+    NSMutableArray *imageArr = [[NSMutableArray alloc] initWithCapacity:0];
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithAttributedString:_textView.attributedText];
+    [attributedString enumerateAttribute:NSAttachmentAttributeName inRange:NSMakeRange(0, attributedString.length) options:0 usingBlock:^(id value, NSRange range, BOOL *stop) {
+        if (value && [value isKindOfClass:[ImageTextAttachment class]]) {
+            ImageTextAttachment *imageAttach = (ImageTextAttachment *)value;
+            UIImage * selImage = imageAttach.image;
+            [imageArr addObject:selImage];
+        }
+    }];
     if (self.doneButtonBlock) {
-        self.doneButtonBlock(_imageArr);
+        self.doneButtonBlock(imageArr);
     }
 }
 
@@ -213,13 +220,13 @@
     
     [contentStr enumerateAttribute:NSAttachmentAttributeName inRange:NSMakeRange(0, contentStr.length) options:0 usingBlock:^(id value, NSRange range, BOOL *stop) {
         if (value && [value isKindOfClass:[ImageTextAttachment class]]) {
-            [contentStr replaceCharactersInRange:range withString:RICHTEXT_IMAGE];
+            [contentStr replaceCharactersInRange:range withString:RichTextImage];
         }
     }];
     
     NSMutableString * mutableStr=[[NSMutableString alloc]initWithString:[contentStr toHtmlString]];
     //这里是把字符串分割成数组，
-    NSArray * strArr=[mutableStr  componentsSeparatedByString:RICHTEXT_IMAGE];
+    NSArray * strArr=[mutableStr  componentsSeparatedByString:RichTextImage];
     NSString * newContent=@"";
     for (int i=0; i<strArr.count; i++) {
         
@@ -236,67 +243,84 @@
 
 #pragma mark ----------------添加图片button-----------------
 - (void)imageButtonAction {
-    
     [self endEditing:YES];
     
-    __weak typeof(self) weakSelf = self;
-    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"选择照片" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-    [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
-        [weakSelf selectedImage];
-    }]];
-    [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    //    __weak typeof(self) weakSelf = self;
+    //    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"选择照片" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    //    [alertVC addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *_Nonnull action) {
+    //        [weakSelf selectedImage];
+    //    }]];
+    //    [alertVC addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    //
+    //    [_selfController presentViewController:alertVC animated:YES completion:nil];
     
-    [_selfController presentViewController:alertVC animated:YES completion:nil];
+    [self selectedImage];
 }
 - (void)selectedImage {
     
-    NSUInteger sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
-    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-    imagePickerController.delegate = self;
-    imagePickerController.allowsEditing = NO;
-    imagePickerController.sourceType = sourceType;
-    [_selfController presentViewController:imagePickerController animated:YES completion:nil];
+    //    NSUInteger sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    //
+    //    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    //    imagePickerController.delegate = self;
+    //    imagePickerController.allowsEditing = NO;
+    //    imagePickerController.sourceType = sourceType;
+    //    [_selfController presentViewController:imagePickerController animated:YES completion:nil];
+    _addImageRange = _newRange;
+    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:9 delegate:self];
+    imagePickerVc.allowPickingVideo = NO;
+    imagePickerVc.sortAscendingByModificationDate = NO;
+    // You can get the photos by block, the same as by delegate.
+    // 你可以通过block或者代理，来得到用户选择的照片.
+    [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
+        if (self.textView.textStorage.length > 0) {
+            [self appenReturn];
+        }
+        for (int i = 0; i < photos.count; i++) {
+            NSRange range = NSMakeRange(_addImageRange.location+i, 1);
+            [self setImageText:photos[i] withRange:range appenReturn:YES];
+        }
+        [self.textView becomeFirstResponder];
+        [self.textView setSelectedRange:NSMakeRange(self.textView.attributedText.length, 0)];
+    }];
+    [_selfController presentViewController:imagePickerVc animated:YES completion:nil];
 }
 
 #pragma mark - image picker delegte
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    [picker dismissViewControllerAnimated:YES completion:nil];
-    
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-    
-    if (self.textView.textStorage.length > 0) {
-        [self appenReturn];
-    }
-    //    _imageTEMP = image;
-    //图片添加后 自动换行
-    [self.textView becomeFirstResponder];
-    [self setImageText:image withRange:self.textView.selectedRange appenReturn:YES];
-}
+//- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+//    [picker dismissViewControllerAnimated:YES completion:nil];
+//
+//    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+//
+//    if (self.textView.textStorage.length > 0) {
+//        [self appenReturn];
+//    }
+//    //    _imageTEMP = image;
+//    //图片添加后 自动换行
+//    [self.textView becomeFirstResponder];
+//    [self setImageText:image withRange:self.textView.selectedRange appenReturn:YES];
+//}
 //设置图片
 - (void)setImageText:(UIImage *)img withRange:(NSRange)range appenReturn:(BOOL)appen {
-    [_imageArr addObject:img];
     UIImage *image = img;
     if (image == nil) {
         return;
     }
     if (![image isKindOfClass:[UIImage class]]) {
-        
         return;
     }
-    
-    CGFloat ImgeHeight = image.size.height * IMAGE_MAX_SIZE / image.size.width;
-    if (ImgeHeight > IMAGE_MAX_SIZE * 2) {
-        ImgeHeight = IMAGE_MAX_SIZE * 2;
-    }
+    CGFloat imgeWeight = ImageWidthSize;
+    CGFloat imgeHeight = image.size.height * imgeWeight / image.size.width;
+    //    if (ImgeHeight > ImageWidthSize * 2) {
+    //        ImgeHeight = ImageWidthSize * 2;
+    //    }
     
     ImageTextAttachment *imageTextAttachment = [ImageTextAttachment new];
     // Set tag and image
-    imageTextAttachment.imageTag = RICHTEXT_IMAGE;
+    imageTextAttachment.imageTag = RichTextImage;
     imageTextAttachment.image = image;
     
     // Set image size
-    imageTextAttachment.imageSize = CGSizeMake(IMAGE_MAX_SIZE, ImgeHeight);
+    imageTextAttachment.imageSize = CGSizeMake(imgeWeight, imgeHeight);
     
     if (appen) {
         // Insert image image
@@ -307,16 +331,15 @@
         }
     }
     
-//    // Move selection location
-//    _textView.selectedRange = NSMakeRange(range.location + 1, range.length);
+    //    // Move selection location
+    //    _textView.selectedRange = NSMakeRange(range.location + 1, range.length);
     
     //设置locationStr的设置
     [self setInitLocation];
-    if (appen) {
-        [self appenReturn];
-    }
+    //    if (appen) {
+    //        [self appenReturn];
+    //    }
     self.textView.font = [UIFont systemFontOfSize:DefaultFont];
-    [self.textView setSelectedRange:NSMakeRange(self.textView.attributedText.length, 0)];
 }
 
 - (void)setInitLocation {
@@ -339,19 +362,6 @@
 
 #pragma mark ------------------textViewDelegate----------------
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
-    
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc]initWithAttributedString:_textView.attributedText];
-    [attributedString enumerateAttribute:NSAttachmentAttributeName inRange:range options:0 usingBlock:^(id value, NSRange range, BOOL *stop) {
-        if (value && [value isKindOfClass:[ImageTextAttachment class]]) {
-            ImageTextAttachment *imageAttach = (ImageTextAttachment *)value;
-            UIImage * selImage = imageAttach.image;
-//            for (UIImage * imageTemp in _imageArr) {
-//                if ([imageTemp isEqual:selImage]) {
-                    [_imageArr removeObject:selImage];
-//                }
-//            }
-        }
-    }];
     if (range.length == 1) {
         return YES;
     } else {
@@ -364,8 +374,12 @@
     return YES;
 }
 
+- (void)textViewDidChangeSelection:(UITextView *)textView {
+    _newRange = textView.selectedRange;
+}
+
 - (void)textViewDidChange:(UITextView *)textView {
-    
+    //    CGFloat floatValue = textView.selectedRange;
     if (self.textView.attributedText.length > 0) {
         self.placeholderLabel.hidden = YES;
     } else {
@@ -388,7 +402,12 @@
         }
         
         CGRect keyboardFrame = ((NSValue *) notification.userInfo[UIKeyboardFrameEndUserInfoKey]).CGRectValue;
-        CGFloat hideHeight = keyboardFrame.size.height -([UIScreen mainScreen].bounds.size.height - self.frame.origin.y - self.frame.size.height)+Scaled(44);
+        CGFloat hideHeight = 0;
+        if (keyboardFrame.size.height != 0) {
+            hideHeight = keyboardFrame.size.height -([UIScreen mainScreen].bounds.size.height - self.frame.origin.y - self.frame.size.height);
+        } else {
+            hideHeight = 0;
+        }
         _selfNewFrame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height - hideHeight);
         [UIView animateWithDuration:0.8f animations:^{
             self.frame = _selfNewFrame;
